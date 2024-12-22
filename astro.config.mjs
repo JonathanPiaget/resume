@@ -1,11 +1,14 @@
 // @ts-check
-import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
-import astroIcon from 'astro-icon';
 import playformCompress from "@playform/compress";
+import astroIcon from 'astro-icon';
+import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://jonathanpiaget.github.io',
+  base: '/resume',
+  trailingSlash: "always",
   integrations: [
     tailwind(),
     astroIcon({
