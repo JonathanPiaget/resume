@@ -128,6 +128,7 @@ interface Projects {
   highlights: Highlight;
   url: string;
   github?: string;
+  gitlab?: string;
 }
 
 interface Interests {

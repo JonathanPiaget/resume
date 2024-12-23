@@ -14,10 +14,7 @@ import { Icon } from "astro-icon/components";
           endDate,
           position,
           summary,
-          responsibilities,
-          achievements,
           url,
-          skills,
           location,
           location_type,
         }) => {
@@ -92,59 +89,6 @@ import { Icon } from "astro-icon/components";
                         </ul>
                       </div>
                     )}
-
-                    {(responsibilities || achievements) && (
-                      <>
-                        <div class="relative flex h-16 flex-col gap-4 overflow-hidden duration-200 ease-out after:absolute after:bottom-0 after:h-12 after:w-full after:bg-gradient-to-t after:from-skin-hue after:content-[''] group-data-[expanded=true]:h-auto group-data-[expanded=true]:after:hidden dark:after:to-skin-hue/0 print:!h-auto print:gap-2 print:after:hidden">
-                          {responsibilities && (
-                            <div class="flex flex-col gap-1">
-                              <h4>Responsibilities:</h4>
-                              <ul class="flex list-disc flex-col gap-2 text-skin-muted [&>li]:ml-4">
-                                {responsibilities.map((responsibility) => (
-                                  <li>{responsibility}</li>
-                                ))}
-                              </ul>
-                            </div>
-                          )}
-
-                          {achievements && (
-                            <div class="flex flex-col gap-1">
-                              <h4>Achievements:</h4>
-                              <ul class="flex list-disc flex-col gap-2 text-skin-muted [&>li]:ml-4">
-                                {achievements.map((achievement) => (
-                                  <li>{achievement}</li>
-                                ))}
-                              </ul>
-                            </div>
-                          )}
-                        </div>
-
-                        <button class="group/more expand-button flex w-fit cursor-pointer items-center justify-center gap-1.5 text-xs text-skin-muted underline transition-all hover:text-skin-base print:hidden">
-                          <span class="expand-text">Show more</span>
-                          <Icon
-                            name="ri:arrow-up-s-line"
-                            class="h-4 w-4 duration-200 ease-out group-hover/more:translate-y-0.5 group-data-[expanded=true]:rotate-180"
-                            width={24}
-                            height={24}
-                          />
-                        </button>
-                      </>
-                    )}
-
-                    <ul
-                      class="flex flex-wrap gap-2 print:hidden"
-                      aria-label="Technologies used"
-                    >
-                      {skills &&
-                        Object.entries(skills).map(([label, icon]) => (
-                          <li class="flex items-center gap-1 rounded-md border border-solid border-skin-hue/20 bg-skin-button-accent/20 px-2 py-0.5 text-xs text-skin-hue backdrop-blur-sm print:border-none print:bg-transparent print:p-0 print:text-zinc-800">
-                            {icon && (
-                              <Icon name={icon} width={16} height={16} />
-                            )}{" "}
-                            <span>{label}</span>
-                          </li>
-                        ))}
-                    </ul>
                   </div>
                 </div>
               </div>

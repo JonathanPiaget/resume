@@ -10,7 +10,7 @@ import { Image } from "astro:assets";
   <div class="grid grid-cols-1 gap-3 md:grid-cols-2 print:flex print:flex-col">
     {
       projects.map(
-        ({ url, description, highlights, name, isActive, github, image }) => {
+        ({ url, description, highlights, name, isActive, github, gitlab, image }) => {
           const isBackgroundImage = image && image?.position === "background";
           const isContainerImage = image && image?.position === "container";
           return (
@@ -29,7 +29,7 @@ import { Image } from "astro:assets";
                     ]}
                     style={{ backgroundImage: `url(${image.url})` }}
                   />
-                  {image.dark && (
+                  {image && image.dark && (
                     <div
                       class="absolute inset-0 hidden transform bg-cover bg-center bg-no-repeat opacity-30 blur-sm grayscale transition-all duration-300 dark:block"
                       style={{ backgroundImage: `url(${image.dark})` }}
@@ -72,6 +72,18 @@ import { Image } from "astro:assets";
                     <Icon name="mdi:github" width={24} height={24} />
                   </a>
                 )}
+
+                {gitlab && (
+                  <a
+                    href={gitlab}
+                    title="View slug repository on GitLab"
+                    target="_blank"
+                    rel="noopener"
+                    class="opacity-75 transition duration-100 hover:scale-125 hover:opacity-100"
+                  >
+                    <Icon name="mdi:gitlab" width={24} height={24} />
+                  </a>
+                )}
               </div>
 
               <p class={`relative z-10 py-3 text-sm text-skin-base`}>
@@ -82,7 +94,7 @@ import { Image } from "astro:assets";
                   return <li>{highlight}</li>;
                 })}
               </ul>
-              {isContainerImage && (
+              {isContainerImage && image?.url && (
                 <a data-src={image.url} data-fancybox="projects">
                   <Image
                     src={image.url}
