@@ -79,9 +79,7 @@
       "startDate": "2022-06-01",
       "endDate": null,
       "summary": "Developing high-availability full-stack projects.",
-      "highlights": [
-        "Enhanced internal workflow efficiency by 30%."
-      ],
+      "highlights": ["Enhanced internal workflow efficiency by 30%."],
       "responsibilities": [
         "Developed and maintained backend services using Node.js and Golang."
       ],
@@ -110,16 +108,12 @@
       "startDate": "2023-01-01",
       "endDate": "2024-02-11",
       "summary": "Led page design and account systems.",
-      "highlights": [
-        "Completed 95% of project content."
-      ],
+      "highlights": ["Completed 95% of project content."],
       "responsibilities": [
         "Developed complete pages.",
         "Integrated user-facing elements with server-side logic."
       ],
-      "achievements": [
-        "Ensured smooth project execution."
-      ],
+      "achievements": ["Ensured smooth project execution."],
       "skills": {
         "HTML": "simple-icons:html5",
         "CSS": "ri:css3-fill",
@@ -221,10 +215,7 @@
   "interests": [
     {
       "name": "Technology",
-      "keywords": [
-        "AI",
-        "Blockchain"
-      ]
+      "keywords": ["AI", "Blockchain"]
     }
   ],
   "references": [

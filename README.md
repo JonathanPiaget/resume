@@ -22,6 +22,7 @@ Thanks for antfu's cool animations.
 ## 🚀 Getting Started
 
 ### 0. One-click to deploy on Vercel
+
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/MiraHikari/portfolio&project-name=portfolio&repository-name=portfolio)
 
 Modify the `cv.json` file to create your own printable Portfolio/CV.
@@ -31,11 +32,13 @@ Modify the `cv.json` file to create your own printable Portfolio/CV.
 - I use [pnpm](https://pnpm.io/installation) as my package manager.
 
 # Initialize the project
+
 ```bash
 pnpm create astro@latest --template MiraHikari/portfolio
 ```
 
 ### 1-1. Clone the repo
+
 If you don't want to use the template command, you can clone this repo and install the dependencies.
 
 ```bash
@@ -54,20 +57,22 @@ Edit the `cv.json` file to create your own printable Portfolio/CV.
 # Enjoy the results
 pnpm dev
 ```
+
 1. Open [**http://localhost:4321**](http://localhost:4321/) in your browser to view the result 🚀
 
 ### 4. Customisable colours:
+
 Change the data-theme of `cv.json` and choose one of the colour themes defined in theme.css, red, blue, green, cyber, pink and default, with its variants in dark mode, or create your own.
 
 ## 🧞 Commands
 
-|     | Command         | Action                                                                       |
-| :-- | :-------------- | :--------------------------------------------------------------------------- |
-| ⚙️  | `dev` or `start` | Launches a local development server at `localhost:4321`.                   |
-| ⚙️  | `build`         | Checks for errors and creates a production build in `./dist/`. |
-| ⚙️  | `preview`       | Local preview at `localhost:4321`                                       |
-| 📦  | `deploy:vercel`         | Deploy on Vercel.                           |
-| 📦 | `deploy:cloudflare`       | Deploy on Cloudflare, please run `wrangler login` first.                                           |                                |
+|     | Command             | Action                                                         |
+| :-- | :------------------ | :------------------------------------------------------------- | --- |
+| ⚙️  | `dev` or `start`    | Launches a local development server at `localhost:4321`.       |
+| ⚙️  | `build`             | Checks for errors and creates a production build in `./dist/`. |
+| ⚙️  | `preview`           | Local preview at `localhost:4321`                              |
+| 📦  | `deploy:vercel`     | Deploy on Vercel.                                              |
+| 📦  | `deploy:cloudflare` | Deploy on Cloudflare, please run `wrangler login` first.       |     |
 
 ## 📝 License
 
