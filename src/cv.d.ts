@@ -65,8 +65,6 @@ interface Volunteer {
 interface Skills {
   icon: string,
   name: string;
-  level: string;
-  keywords: Array<string>;
 }
 
 interface Awards {
@@ -80,7 +78,6 @@ interface Certificates {
   name: string;
   date: DateStr;
   issuer: string;
-  url: string;
 }
 
 interface Publications {
