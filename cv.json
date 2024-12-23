@@ -71,65 +71,24 @@
   ],
   "work": [
     {
-      "name": "Sgguo Development Team",
+      "name": "Institute for the Digitalisation of Organisations",
       "position": "Full-stack Developer",
-      "location_type": "Remote",
-      "location": "CN",
-      "url": "https://github.com/Sgguo-Development-Team",
+      "location_type": "On site",
+      "location": "Neuchâtel, CH",
+      "url": "https://www.he-arc.ch/en/business-management/institut-de-digitalisation-des-organisations-ido/",
       "startDate": "2022-06-01",
       "endDate": null,
-      "summary": "Developing high-availability full-stack projects.",
-      "highlights": ["Enhanced internal workflow efficiency by 30%."],
-      "responsibilities": [
-        "Developed and maintained backend services using Node.js and Golang."
-      ],
-      "achievements": [
-        "Implemented a cloud drive and verification code system."
-      ],
-      "skills": {
-        "PHP": "simple-icons:php",
-        "Node": "ri:nodejs-line",
-        "Golang": "simple-icons:go",
-        "Next.js": "ri:nextjs-fill",
-        "React": "mdi:react",
-        "SQL": "simple-icons:mysql",
-        "Git": "mdi:git",
-        "GitHub": "mdi:github",
-        "NestJS": "simple-icons:nestjs",
-        "Vue": "mdi:vuejs"
-      }
+      "summary": "Developed and maintained web applications for different projects."
     },
     {
-      "name": "Riddle Town Team",
+      "name": "Light-contact Boxing Association",
       "position": "Full-stack Developer",
       "location_type": "Remote",
-      "location": "CN",
-      "url": "https://rth2.gcxstudio.cn",
-      "startDate": "2023-01-01",
-      "endDate": "2024-02-11",
-      "summary": "Led page design and account systems.",
-      "highlights": ["Completed 95% of project content."],
-      "responsibilities": [
-        "Developed complete pages.",
-        "Integrated user-facing elements with server-side logic."
-      ],
-      "achievements": ["Ensured smooth project execution."],
-      "skills": {
-        "HTML": "simple-icons:html5",
-        "CSS": "ri:css3-fill",
-        "JavaScript": "simple-icons:javascript",
-        "TypeScript": "simple-icons:typescript",
-        "Vite": "simple-icons:vite",
-        "Node": "ri:nodejs-line",
-        "Docker": "mdi:docker",
-        "WordPress": "ri:wordpress-fill",
-        "Astro": "simple-icons:astro",
-        "SQL": "simple-icons:mysql",
-        "Tailwind": "mdi:tailwind",
-        "React": "mdi:react",
-        "GitHub": "mdi:github",
-        "Git": "mdi:git"
-      }
+      "location": "Bienne, CH",
+      "url": "https://online.light-contact.ch/",
+      "startDate": "2021-06-01",
+      "endDate": null,
+      "summary": "Maintaining the website and the mobile app, as well as developing new features."
     }
   ],
   "skills": [
@@ -215,7 +174,10 @@
   "interests": [
     {
       "name": "Technology",
-      "keywords": ["AI", "Blockchain"]
+      "keywords": [
+        "AI",
+        "Blockchain"
+      ]
     }
   ],
   "references": [
