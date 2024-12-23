@@ -2,9 +2,9 @@
   "analyticsCode": "",
   "pageLayout": "two-column",
   "basics": {
-    "name": "Jonathan PIaget",
+    "name": "Jonathan Piaget",
     "label": "Full Stack Developer (web and mobile)",
-    "image": "/profile.png",
+    "image": "/profile.jpeg",
     "email": "piagetjonathan@pm.me",
     "url": "https://resume.piagetjonathan.ch",
     "summary": "Born in 1998, I primarily work with Python for full-stack development, and enjoy working with various technologies.",
@@ -25,17 +25,23 @@
         "icon": "mdi:gitlab",
         "username": "piagetjonathan",
         "url": "https://gitlab.com/piagetjonathan"
+      },
+      {
+        "network": "Linkedin",
+        "icon": "mdi:linkedin",
+        "username": "Jonathan Piaget",
+        "url": "https://www.linkedin.com/in/jonathan-piaget-11b722150/"
       }
     ]
   },
   "education": [
     {
-      "institution": "Nanchang No.27 Middle School",
-      "url": "",
-      "area": "Regular Student",
+      "institution": "Haute Ecole de Gestion Arc",
+      "url": "https://www.he-arc.ch/en/business-management/bachelor-en/bachelors-degree-in-business-information-technology/",
+      "area": "Business Information Technology",
       "studyType": "Full-time student",
-      "startDate": "2021-9-01",
-      "endDate": null
+      "startDate": "2019-9-16",
+      "endDate": "2024-1-29"
     }
   ],
   "certificates": [
