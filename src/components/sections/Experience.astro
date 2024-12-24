@@ -2,9 +2,10 @@
 import Section from "../Section.astro";
 import { work } from "@cv";
 import { Icon } from "astro-icon/components";
+import * as m from "../../paraglide/messages.js";
 ---
 
-<Section className={Astro.props.className} title="Experience">
+<Section className={Astro.props.className} title={m.experience()}>
   <ul class="flex flex-col">
     {
       work.map(
@@ -20,7 +21,7 @@ import { Icon } from "astro-icon/components";
         }) => {
           const startYear = new Date(startDate).getFullYear();
           const endYear =
-            endDate != null ? new Date(endDate).getFullYear() : "Present";
+            endDate != null ? new Date(endDate).getFullYear() : m.present();
 
           return (
             <li class="relative print:py-2">
@@ -28,7 +29,7 @@ import { Icon } from "astro-icon/components";
                 data-expanded="false"
                 class="expand-container group relative grid pb-1 transition-all sm:grid-cols-12 sm:gap-8 md:gap-6 lg:hover:!opacity-100 print:grid-cols-1 print:gap-1 print:pb-0"
               >
-                <header class="relative mt-1 text-xs font-semibold sm:col-span-2">
+                <header class="relative mr-1 mt-1 text-xs font-semibold sm:col-span-2">
                   <time datetime={startDate} data-title={startDate}>
                     {startYear}
                   </time>{" "}
