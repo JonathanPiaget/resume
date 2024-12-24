@@ -5,6 +5,8 @@
     "paths": {
       "@cv": ["./cv.json"],
       "@/*": ["src/*"]
-    }
+    },
+    "moduleResolution": "Bundler",
+    "allowJs": true
   }
 }

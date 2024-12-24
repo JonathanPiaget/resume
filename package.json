@@ -5,11 +5,12 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide && astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
     "deploy:vercel": "vercel deploy",
-    "deploy:cloudflare": "astro build && wrangler pages deploy ./dist"
+    "deploy:cloudflare": "astro build && wrangler pages deploy ./dist",
+    "postinstall": "paraglide-js compile --project ./project.inlang --outdir ./src/paraglide"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
@@ -19,6 +20,7 @@
     "@iconify-json/mdi": "^1.2.0",
     "@iconify-json/ri": "^1.2.0",
     "@iconify-json/simple-icons": "^1.2.5",
+    "@inlang/paraglide-astro": "^0.3.0",
     "@playform/compress": "^0.1.1",
     "astro": "4.15.11",
     "astro-icon": "^1.1.1",
@@ -28,6 +30,7 @@
     "typescript": "^5.6.2"
   },
   "devDependencies": {
+    "@inlang/paraglide-js": "1.11.3",
     "prettier": "^3.3.3",
     "prettier-plugin-astro": "^0.14.1",
     "rimraf": "^6.0.1",
