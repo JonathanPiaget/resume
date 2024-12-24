@@ -2,5 +2,10 @@
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "about": "À propos",
   "label": "Développeur Full Stack (web et mobile)",
-  "summary": "Né en 1998, je suis un créateur passionné d'applications qui visent à améliorer le quotidien, animé par une grande curiosité et un réel désir d'aider les autres."
+  "summary": "Né en 1998, je suis un créateur passionné d'applications qui visent à améliorer le quotidien, animé par une grande curiosité et un réel désir d'aider les autres.",
+  "country": "Suisse",
+  "blue": "Bleu",
+  "green": "Vert",
+  "pink": "Rose",
+  "red": "Rouge"
 }

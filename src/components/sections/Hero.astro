@@ -6,7 +6,7 @@ import { Image } from "astro:assets";
 import * as m from "../../paraglide/messages.js";
 
 const { name, image, location, profiles, email } = basics;
-const { region, country } = location;
+const { region } = location;
 ---
 
 <Section>
@@ -16,7 +16,7 @@ const { region, country } = location;
       <h2>{m.label()}</h2>
       <div class="flex items-center gap-2 pt-2 text-sm text-skin-muted">
         <Icon class="print:hidden" name="mdi:world" width={20} height={20} />
-        {region}, {country}
+        {region}, {m.country()}
       </div>
       <footer class="print">
         {email}
