@@ -20,6 +20,11 @@ repos:
     rev: v4.0.0-alpha.8
     hooks:
       - id: prettier
+        additional_dependencies:
+          # install Prettier v4.0.0-alpha.8 into the same env so the hook can find the binary
+          - "prettier@4.0.0-alpha.8"
+          # install the Astro plugin
+          - "prettier-plugin-astro@latest"
 
   - repo: https://github.com/gitleaks/gitleaks
     rev: v8.22.0
