@@ -2,11 +2,10 @@
 import Section from "../Section.astro";
 import * as m from "../../paraglide/messages.js";
 import CV from "@cv";
-const { summary } = CV.basics;
 ---
 
 <Section title={m.about}>
   <p class="font-mono opacity-75 print:font-sans">
-    {summary}
+    {m.summary()}
   </p>
 </Section>

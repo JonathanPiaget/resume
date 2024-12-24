@@ -1,9 +1,9 @@
 {
   "basics": {
+    "name": "Jonathan Piaget",
     "image": "/profile.png",
     "email": "piagetjonathan@pm.me",
     "url": "https://resume.piagetjonathan.ch",
-    "summary": "Born in 1998, I primarily work with Python for full-stack development, and enjoy working with various technologies.",
     "theme": "blue",
     "location": {
       "country": "Switzerland",

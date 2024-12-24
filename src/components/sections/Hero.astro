@@ -5,14 +5,14 @@ import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 import * as m from "../../paraglide/messages.js";
 
-const { image, location, profiles, email } = basics;
+const { name, image, location, profiles, email } = basics;
 const { region, country } = location;
 ---
 
 <Section>
   <div class="flex flex-col-reverse gap-8">
     <div class="info">
-      <h1>Jonathan Piaget</h1>
+      <h1>{name}</h1>
       <h2>{m.label()}</h2>
       <div class="flex items-center gap-2 pt-2 text-sm text-skin-muted">
         <Icon class="print:hidden" name="mdi:world" width={20} height={20} />
@@ -44,7 +44,7 @@ const { region, country } = location;
             return (
               <a
                 href={url}
-                title={`Visit Jonathan's profile on ${network}`}
+                title={`Visit ${name}'s profile on ${network}`}
                 target="_blank"
                 class="print:hidden"
                 rel="noopener noreferrer"
@@ -67,7 +67,7 @@ const { region, country } = location;
         height={600}
         width={600}
         src={image}
-        alt="Jonathan Piaget's profile picture"
+        alt=`${name}'s profile picture`
       />
       <div class="pointer-events-none absolute -inset-2">
         <div

@@ -1,5 +1,6 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "about": "About",
-  "label": "Full Stack Developer (web and mobile)"
+  "label": "Full Stack Developer (web and mobile)",
+  "summary": "Born in 1998, I am a passionate builder of practical applications that improve daily lives, driven by a deep curiosity and a genuine desire to help others."
 }
