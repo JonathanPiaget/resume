@@ -1,6 +1,5 @@
 export interface CV {
   basics: Basics;
-  work: Array<Work>;
   volunteer: Array<Volunteer>;
   education: Array<Education>;
   awards: Array<Awards>;
@@ -99,24 +98,6 @@ interface Languages {
   language: Language;
   fluency: string;
 }
-
-type Language =
-  | "Spanish"
-  | "English"
-  | "German"
-  | "France"
-  | "Italian"
-  | "Korean"
-  | "Portuguese"
-  | "Chinese"
-  | "Arabic"
-  | "Dutch"
-  | "Finnish"
-  | "Russian"
-  | "Turkish"
-  | "Hindi"
-  | "Bengali"
-  | string;
 
 interface Projects {
   name: string;

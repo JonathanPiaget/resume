@@ -1,13 +1,22 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "about": "À propos",
-  "label": "Développeur Full Stack (web et mobile)",
-  "summary": "Né en 1998, je suis un créateur passionné d'applications qui visent à améliorer le quotidien, animé par une grande curiosité et un réel désir d'aider les autres.",
+  "label": "Développeur full-stack (web et mobile)",
+  "presentation_sentence": "Né en 1998, je suis un créateur passionné d'applications qui visent à améliorer le quotidien, animé par une grande curiosité et un réel désir d'aider les autres.",
   "country": "Suisse",
   "blue": "Bleu",
   "green": "Vert",
   "pink": "Rose",
   "red": "Rouge",
   "experience": "Expérience profesionnelle",
-  "present": "Aujourd'hui"
+  "present": "Aujourd'hui",
+  "ido": "Institut de digitalisation des organisations",
+  "full_stack_developer": "Développeur full-stack",
+  "ido_summary": "Développement et maintenance d'applications web pour différents projets.",
+  "on_site": "Présentiel",
+  "ido_url": "https://www.he-arc.ch/gestion/institut-de-digitalisation-des-organisations-ido/",
+  "summary": "Résumé",
+  "lcba": "Association de boxe light-contact",
+  "lcba_summary": "Maintenance du site web et de l'application mobile, ainsi que développement de nouvelles fonctionnalités.",
+  "remote": "Télétravail"
 }

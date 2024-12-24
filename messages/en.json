@@ -1,13 +1,22 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
   "about": "About",
-  "label": "Full Stack Developer (web and mobile)",
-  "summary": "Born in 1998, I am a passionate builder of practical applications that improve daily lives, driven by a deep curiosity and a genuine desire to help others.",
+  "label": "Full-stack Developer (web and mobile)",
+  "presentation_sentence": "Born in 1998, I am a passionate builder of practical applications that improve daily lives, driven by a deep curiosity and a genuine desire to help others.",
   "country": "Switzerland",
   "blue": "Blue",
   "green": "Green",
   "pink": "Pink",
   "red": "Red",
   "experience": "Experience",
-  "present": "Present"
+  "present": "Present",
+  "ido": "Institute for the Digitalisation of Organisations",
+  "full_stack_developer": "Full-stack developer",
+  "ido_summary": "Developed and maintained web applications for different projects.",
+  "on_site": "On site",
+  "ido_url": "https://www.he-arc.ch/en/business-management/institut-de-digitalisation-des-organisations-ido/",
+  "summary": "summary",
+  "lcba": "Light-contact Boxing Association",
+  "lcba_summary": "Maintaining the website and the mobile app, as well as developing new features.",
+  "remote": "Remote"
 }

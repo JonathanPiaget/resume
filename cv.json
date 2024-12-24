@@ -4,7 +4,7 @@
     "image": "/profile.png",
     "email": "piagetjonathan@pm.me",
     "url": "https://resume.piagetjonathan.ch",
-    "theme": "orange",
+    "theme": "blue",
     "profiles": [
       {
         "network": "GitHub",
@@ -59,28 +59,6 @@
       "name": "CFC et maturité profesionnelle commerciale",
       "date": "2019-07-04",
       "issuer": "Lycée Jean-Piaget"
-    }
-  ],
-  "work": [
-    {
-      "name": "Institute for the Digitalisation of Organisations",
-      "position": "Full-stack Developer",
-      "location_type": "On site",
-      "location": "Neuchâtel, CH",
-      "url": "https://www.he-arc.ch/en/business-management/institut-de-digitalisation-des-organisations-ido/",
-      "startDate": "2022-06-01",
-      "endDate": null,
-      "summary": "Developed and maintained web applications for different projects."
-    },
-    {
-      "name": "Light-contact Boxing Association",
-      "position": "Full-stack Developer",
-      "location_type": "Remote",
-      "location": "Bienne, CH",
-      "url": "https://online.light-contact.ch/",
-      "startDate": "2021-06-01",
-      "endDate": null,
-      "summary": "Maintaining the website and the mobile app, as well as developing new features."
     }
   ],
   "skills": [
