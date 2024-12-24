@@ -1,4 +1,5 @@
 {
   "$schema": "https://inlang.com/schema/inlang-message-format",
-  "about": "About"
+  "about": "About",
+  "label": "Full Stack Developer (web and mobile)"
 }
