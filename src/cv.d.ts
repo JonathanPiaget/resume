@@ -28,7 +28,6 @@ interface Location {
   address: string;
   postalCode: string;
   city: string;
-  region: string;
 }
 
 interface Profiles {
