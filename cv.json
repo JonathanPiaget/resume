@@ -152,21 +152,5 @@
       "name": "MiraHikari",
       "reference": "Reference…"
     }
-  ],
-  "projects": [
-    {
-      "name": "Arclean",
-      "image": {
-        "position": null,
-        "url": null,
-        "dark": null
-      },
-      "isActive": true,
-      "description": "Facility management application for building managers and janitors of the Heg-Arc",
-      "highlights": [],
-      "url": "https://arclean.he-arc.ch",
-      "github": "",
-      "gitlab": "https://gitlab.com/heg-arc/arclean/arclean"
-    }
   ]
 }

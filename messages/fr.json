@@ -18,5 +18,12 @@
   "summary": "Résumé",
   "lcba": "Association de boxe light-contact",
   "lcba_summary": "Maintenance du site web et de l'application mobile, ainsi que développement de nouvelles fonctionnalités.",
-  "remote": "Télétravail"
+  "remote": "Télétravail",
+  "projects": "Projets",
+  "arclean_description": "Application de gestion pour les responsable d'immeubles et les concierges de la Heg-Arc.",
+  "arclean_highlight_1": "🔄 Génération automatique des tâches basée sur les événements des salles et du bâtiment",
+  "arclean_highlight_2": "📅 Intégration transparente avec les calendriers Outlook",
+  "arclean_highlight_3": "👥 Interfaces dédiées pour les concierges et les gestionnaires du bâtiment",
+  "arclean_highlight_4": "📊 Tableau de bord en temps réel pour suivre l'avancement du nettoyage",
+  "arclean_highlight_5": "🎯 Système intelligent d'attribution et de gestion des tâches"
 }

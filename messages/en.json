@@ -18,5 +18,12 @@
   "summary": "summary",
   "lcba": "Light-contact Boxing Association",
   "lcba_summary": "Maintaining the website and the mobile app, as well as developing new features.",
-  "remote": "Remote"
+  "remote": "Remote",
+  "projects": "Projects",
+  "arclean_description": "Facility management application for building managers and janitors of the Heg-Arc.",
+  "arclean_highlight_1": "🔄 Automatic task generation based on room and building events",
+  "arclean_highlight_2": "📅 Seamless integration with Outlook calendars",
+  "arclean_highlight_3": "👥 Dedicated interfaces for both janitors and building managers",
+  "arclean_highlight_4": "📊 Real-time dashboard for tracking cleaning progress",
+  "arclean_highlight_5": "🎯 Smart task assignment and management system"
 }
