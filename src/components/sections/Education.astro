@@ -1,8 +1,25 @@
 ---
+import * as m from "../../paraglide/messages.js";
 import Section from "../Section.astro";
 
-import { education } from "@cv";
 import { certificates } from "@cv";
+
+const education = [
+  {
+    institution: "Haute Ecole de Gestion Arc",
+    url: m.heg_url(),
+    area: m.heg_area(),
+    startDate: "2019-9-16",
+    endDate: "2024-1-29",
+  },
+  {
+    institution: "Lycée Jean-Piaget",
+    url: "https://www.lyceejeanpiaget.ch/anciens_cursus/mp/Pages/default.aspx",
+    area: m.jp_area(),
+    startDate: "2015-08-01",
+    endDate: "2019-07-04",
+  },
+];
 ---
 
 <Section className={Astro.props.className} title="Education">

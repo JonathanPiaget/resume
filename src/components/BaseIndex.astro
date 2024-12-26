@@ -11,7 +11,7 @@ import KeyboardManager from "@/components/KeyboardManager.astro";
 import ThemeSwitch from "@/components/ThemeSwitch.astro";
 import * as m from "../paraglide/messages.js";
 
-import CV, { basics } from "@cv";
+import { basics } from "@cv";
 import Education from "@/components/sections/Education.astro";
 ---
 
@@ -31,7 +31,7 @@ import Education from "@/components/sections/Education.astro";
     >
       <Experience className="print:col-span-3" />
       <Projects className="print:hidden" />
-      {CV?.education && <Education className="order-first" />}
+      <Education className="order-first" />
       <Skills className="print:hidden" />
     </div>
   </main>

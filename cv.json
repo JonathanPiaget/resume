@@ -26,24 +26,6 @@
       }
     ]
   },
-  "education": [
-    {
-      "institution": "Haute Ecole de Gestion Arc",
-      "url": "https://www.he-arc.ch/en/business-management/bachelor-en/bachelors-degree-in-business-information-technology/",
-      "area": "Business Information Technology",
-      "studyType": "Full-time student",
-      "startDate": "2019-9-16",
-      "endDate": "2024-1-29"
-    },
-    {
-      "institution": "Lycée Jean-Piaget",
-      "url": "https://www.lyceejeanpiaget.ch/anciens_cursus/mp/Pages/default.aspx",
-      "area": "Economy and services",
-      "studyType": "Full-time student",
-      "startDate": "2015-08-01",
-      "endDate": "2019-07-04"
-    }
-  ],
   "certificates": [
     {
       "name": "Bachelor's degree in Business Information Technology",
