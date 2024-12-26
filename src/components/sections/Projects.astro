@@ -22,13 +22,32 @@ const projects = [
   },
   {
     name: "Eboxing",
-    image: "",
+    image: "/eboxing_screenshot.png",
     isActive: true,
-    description:
-      "Facility management application for building managers and janitors of the Heg-Arc",
-    highlights: [],
+    description: m.eboxing_description(),
+    highlights: [
+      m.eboxing_highlight_1(),
+      m.eboxing_highlight_2(),
+      m.eboxing_highlight_3(),
+      m.eboxing_highlight_4(),
+      m.eboxing_highlight_5(),
+    ],
     url: "https://online.light-contact.ch",
     git: "https://gitlab.com/heg-arc/lcba/eboxing",
+  },
+  {
+    name: "Fundsai",
+    image: "/fundsai_screenshot.png",
+    isActive: true,
+    description: m.fundsai_description(),
+    highlights: [
+      m.fundsai_highlight_1(),
+      m.fundsai_highlight_2(),
+      m.fundsai_highlight_3(),
+      m.fundsai_highlight_4(),
+    ],
+    url: "https://fundsai.accipiterfinance.com",
+    git: "https://gitlab.com/heg-arc/accipiter/fundsai",
   },
 ];
 ---
