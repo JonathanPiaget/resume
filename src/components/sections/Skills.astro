@@ -2,9 +2,10 @@
 import Section from "../Section.astro";
 import { skills } from "@cv";
 import { Icon } from "astro-icon/components";
+import * as m from "../../paraglide/messages.js";
 ---
 
-<Section className={Astro.props.className} title="Skills">
+<Section className={Astro.props.className} title={m.skills()}>
   <ul
     class="inline-flex flex-wrap gap-4 print:mt-4 [&>li>svg]:text-skin-hue [&>li]:text-sm"
   >

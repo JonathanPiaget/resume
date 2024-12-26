@@ -2,8 +2,6 @@
 import * as m from "../../paraglide/messages.js";
 import Section from "../Section.astro";
 
-import { certificates } from "@cv";
-
 const education = [
   {
     institution: "Haute Ecole de Gestion Arc",
@@ -18,6 +16,24 @@ const education = [
     area: m.jp_area(),
     startDate: "2015-08-01",
     endDate: "2019-07-04",
+  },
+];
+
+const certificates = [
+  {
+    name: m.bachelor_name(),
+    date: "2024-01-29",
+    issuer: "Haute Ecole de Gestion Arc",
+  },
+  {
+    name: "Business English Certificate Vantage (C1)",
+    date: "2020-11-01",
+    issuer: "Cambridge Assessment English",
+  },
+  {
+    name: "CFC et maturité profesionnelle commerciale",
+    date: "2019-07-04",
+    issuer: "Lycée Jean-Piaget",
   },
 ];
 ---
