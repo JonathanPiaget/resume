@@ -1,0 +1,40 @@
+---
+import { intersection } from "astro:schema";
+import * as m from "../../paraglide/messages.js";
+import Section from "../Section.astro";
+import { Icon } from "astro-icon/components";
+
+const interests = [
+  {
+    name: m.politic(),
+    icon: "mdi:globe-model",
+  },
+  {
+    name: m.history(),
+    icon: "mdi:book-open-page-variant",
+  },
+  {
+    name: m.philosophy(),
+    icon: "mdi:thought-bubble",
+  },
+  {
+    name: m.martial_arts(),
+    icon: "mdi:sword-cross",
+  },
+];
+---
+
+<Section title={m.interests()}>
+  <ul class="font-mono opacity-75 print:font-sans [&>li]:ml-4">
+    {
+      interests.map(({ name, icon }) => {
+        return (
+          <li class="mb-2 flex items-center gap-1">
+            {icon && <Icon name={icon} width={16} height={16} class="me-4" />}{" "}
+            <span>{name}</span>
+          </li>
+        );
+      })
+    }
+  </ul>
+</Section>

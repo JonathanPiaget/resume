@@ -103,11 +103,5 @@
       "name": "Linux",
       "icon": "simple-icons:linux"
     }
-  ],
-  "interests": [
-    {
-      "name": "Technology",
-      "keywords": ["AI", "Blockchain"]
-    }
   ]
 }

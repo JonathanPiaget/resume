@@ -58,5 +58,10 @@
   "french": "French",
   "english": "English",
   "native_speaker": "Native speaker",
-  "intermediate": "Intermediate"
+  "intermediate": "Intermediate",
+  "interests": "Interests",
+  "politic": "Politics and geopolitics",
+  "history": "History",
+  "philosophy": "Philosophy",
+  "martial_arts": "Martial arts"
 }
