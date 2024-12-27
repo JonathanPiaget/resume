@@ -24,7 +24,7 @@
   "cnp_summary": "J'ai pu expérimenter de nombreux postes dans le département des finances, ai principalement fait de la saisie de données, de la comptabilité et ai géré une caisse.",
   "sem": "Secrétariat d'État aux migrations",
   "civilian": "Civiliste",
-  "sem_summary": "En poste au sein du plus grand centre fédéral pour requérants d'asile de Suisse, j'étais principalement chargé de conduire les personnes incapables de se déplacer seules en train vers les centres cantonaux ou à l'hôpital lorsqu'elles y étaient assignées. J'ai également eu l'opportunité de soutenir les travailleurs sociaux, de sociabiliser avec les requérantes et d'apporter mon aide aux tâches administratives. Cette expérience a été extrêmement enrichissante et profondément marquante.",
+  "sem_summary": "En poste au sein du plus grand centre fédéral pour requérants d'asile de Suisse, j'étais principalement chargé de conduire les personnes incapables de se déplacer seules en train vers les centres cantonaux ou à l'hôpital lorsqu'elles y étaient assignées. J'ai également eu l'opportunité de soutenir les travailleurs sociaux, de sociabiliser avec les requérants et d'apporter mon aide aux tâches administratives. Cette expérience a été extrêmement enrichissante et profondément marquante.",
   "sem_url": "https://www.sem.admin.ch/sem/fr/home.html",
   "remote": "Télétravail",
   "projects": "Projets",
@@ -53,5 +53,10 @@
   "heg_area": "Informatique de gestion",
   "jp_area": "Économie et services",
   "bachelor_name": "Bachelor en informatique de gestion",
-  "skills": "Compétences"
+  "skills": "Compétences",
+  "languages": "Langues",
+  "french": "Français",
+  "english": "Anglais",
+  "native_speaker": "Langue maternelle",
+  "intermediate": "Intermédiaire"
 }

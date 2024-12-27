@@ -104,26 +104,10 @@
       "icon": "simple-icons:linux"
     }
   ],
-  "languages": [
-    {
-      "language": "French",
-      "fluency": "Native speaker"
-    },
-    {
-      "language": "English",
-      "fluency": "Intermediate"
-    }
-  ],
   "interests": [
     {
       "name": "Technology",
       "keywords": ["AI", "Blockchain"]
-    }
-  ],
-  "references": [
-    {
-      "name": "MiraHikari",
-      "reference": "Reference…"
     }
   ]
 }

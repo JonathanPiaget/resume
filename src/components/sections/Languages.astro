@@ -1,0 +1,29 @@
+---
+import * as m from "../../paraglide/messages.js";
+import Section from "../Section.astro";
+
+const languages = [
+  {
+    language: m.french(),
+    fluency: m.native_speaker(),
+  },
+  {
+    language: m.english(),
+    fluency: m.intermediate(),
+  },
+];
+---
+
+<Section title={m.languages}>
+  <ul class="list-disc font-mono opacity-75 print:font-sans [&>li]:ml-4">
+    {
+      languages.map(({ language, fluency }) => {
+        return (
+          <li class="mb-2">
+            {language} ({fluency})
+          </li>
+        );
+      })
+    }
+  </ul>
+</Section>

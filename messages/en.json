@@ -53,5 +53,10 @@
   "heg_area": "Business Information Technology",
   "jp_area": "Economy and services",
   "bachelor_name": "Bachelor's degree in Business Information Technology",
-  "skills": "Skills"
+  "skills": "Skills",
+  "languages": "Languages",
+  "french": "French",
+  "english": "English",
+  "native_speaker": "Native speaker",
+  "intermediate": "Intermediate"
 }
