@@ -36,16 +36,32 @@
       "icon": "simple-icons:django"
     },
     {
-      "name": "HTML",
-      "icon": "simple-icons:html5"
+      "name": "Dart",
+      "icon": "simple-icons:dart"
     },
     {
-      "name": "CSS",
-      "icon": "ri:css3-fill"
+      "name": "Flutter",
+      "icon": "simple-icons:flutter"
     },
     {
-      "name": "JavaScript",
-      "icon": "simple-icons:javascript"
+      "name": "Vue",
+      "icon": "mdi:vuejs"
+    },
+    {
+      "name": "Astro",
+      "icon": "simple-icons:astro"
+    },
+    {
+      "name": "Htmx",
+      "icon": "simple-icons:htmx"
+    },
+    {
+      "name": "Alpine.js",
+      "icon": "simple-icons:alpinedotjs"
+    },
+    {
+      "name": "Vite",
+      "icon": "simple-icons:vite"
     },
     {
       "name": "Tailwind",
@@ -72,32 +88,8 @@
       "icon": "mdi:gitlab"
     },
     {
-      "name": "Vue",
-      "icon": "mdi:vuejs"
-    },
-    {
-      "name": "Htmx",
-      "icon": "simple-icons:htmx"
-    },
-    {
-      "name": "Alpine.js",
-      "icon": "simple-icons:alpinedotjs"
-    },
-    {
       "name": "Docker / Docker Compose",
       "icon": "mdi:docker"
-    },
-    {
-      "name": "Vite",
-      "icon": "simple-icons:vite"
-    },
-    {
-      "name": "Astro",
-      "icon": "simple-icons:astro"
-    },
-    {
-      "name": "Shell",
-      "icon": "mdi:powershell"
     },
     {
       "name": "Linux",
