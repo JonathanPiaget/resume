@@ -149,4 +149,32 @@
       --color-button-muted: 255, 240, 245;
     }
   }
+
+  h1 {
+    @apply mb-3 text-4xl font-extrabold;
+  }
+
+  h2 {
+    @apply mb-2 text-3xl font-bold;
+  }
+
+  h3 {
+    @apply mb-2 text-2xl font-semibold;
+  }
+
+  h4 {
+    @apply mb-2 text-xl font-medium;
+  }
+
+  h5 {
+    @apply mb-1 text-lg font-medium;
+  }
+
+  h6 {
+    @apply mb-1 text-base font-medium;
+  }
+
+  p {
+    @apply mb-4;
+  }
 }

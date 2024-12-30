@@ -24,7 +24,7 @@
   "cnp_summary": "J'ai pu expérimenter de nombreux postes dans le département des finances, ai principalement fait de la saisie de données, de la comptabilité et ai géré une caisse.",
   "sem": "Secrétariat d'État aux migrations",
   "civilian": "Civiliste",
-  "sem_summary": "En poste au sein du plus grand centre fédéral pour requérants d'asile de Suisse, j'étais principalement chargé de conduire les personnes incapables de se déplacer seules en train vers les centres cantonaux ou à l'hôpital lorsqu'elles y étaient assignées. J'ai également eu l'opportunité de soutenir les travailleurs sociaux, de sociabiliser avec les requérants et d'apporter mon aide aux tâches administratives. Cette expérience a été extrêmement enrichissante et profondément marquante.",
+  "sem_summary": "En poste au sein du plus grand centre fédéral pour requérants d'asile de Suisse, j'étais principalement chargé de conduire les personnes incapables de se déplacer seules en train vers les centres cantonaux ou à l'hôpital lorsqu'elles y étaient assignées. J'ai également eu l'opportunité de soutenir les travailleurs sociaux, de sociabiliser avec les requérants et d'apporter mon aide aux tâches administratives.",
   "sem_url": "https://www.sem.admin.ch/sem/fr/home.html",
   "remote": "Télétravail",
   "projects": "Projets",
@@ -45,7 +45,7 @@
   "fundsai_highlight_2": "📊 Outils complets d'analyse statistique et de visualisation",
   "fundsai_highlight_3": "🤖 Recommandations de fonds basées sur l'IA selon les préférences du portefeuille",
   "fundsai_highlight_4": "📈 Suivi en temps réel des performances et métriques des fonds",
-  "arcultura_description": "Système intégré d'enregistrement et de suivi des objets en cas de sinistre. Après un événement impactant des collections patrimoniales, Arcultura gère le sauvetage et fournit des indicateurs d'avancement. Conçu pour les musées à l'origine, il a été adapté pour la protection civile, offrant une solution numérique permettant de scanner, décrire et suivre les objets tout en optimisant la coordination en cas d'urgence.",
+  "arcultura_description": "Système intégré d'enregistrement et de suivi des objets en cas de sinistre. Après un événement impactant des collections patrimoniales, Arcultura gère le sauvetage et fournit des indicateurs d'avancement. À l'origine conçu pour les musées, il a été adapté pour la protection civile, offrant une solution numérique permettant de scanner, décrire et suivre les objets tout en optimisant la coordination en cas d'urgence.",
   "arcultura_highlight_1": "📷 Numérisation et enregistrement rapide des objets et de leur état",
   "arcultura_highlight_2": "🔄 Suivi en temps réel des opérations de sauvetage et des déplacements",
   "arcultura_highlight_3": "📊 Tableaux de bord et indicateurs clés pour un pilotage optimal des interventions",
@@ -65,5 +65,6 @@
   "philosophy": "Philosophie",
   "martial_arts": "Arts martiaux",
   "ulaval_area": "Échange lors de deux sessions académiques",
-  "main_contributor": "principal contributeur"
+  "main_contributor": "principal contributeur",
+  "certificates": "Certificats"
 }
