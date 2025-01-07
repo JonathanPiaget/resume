@@ -14,10 +14,10 @@
     "@fancyapps/ui": "^5.0.36",
     "@iconify-json/mdi": "^1.2.2",
     "@iconify-json/ri": "^1.2.5",
-    "@iconify-json/simple-icons": "^1.2.17",
-    "@inlang/paraglide-astro": "^0.3.0",
-    "@playform/compress": "^0.1.6",
-    "astro": "5.1.1",
+    "@iconify-json/simple-icons": "^1.2.18",
+    "@inlang/paraglide-astro": "^0.3.3",
+    "@playform/compress": "^0.1.7",
+    "astro": "5.1.2",
     "astro-icon": "^1.1.5",
     "hotkeypad": "0.1.1",
     "prettier-plugin-tailwindcss": "^0.6.9",
@@ -25,7 +25,7 @@
     "typescript": "^5.7.2"
   },
   "devDependencies": {
-    "@inlang/paraglide-js": "1.11.3",
+    "@inlang/paraglide-js": "1.11.7",
     "prettier": "^3.4.2",
     "prettier-plugin-astro": "^0.14.1",
     "rimraf": "^6.0.1",
