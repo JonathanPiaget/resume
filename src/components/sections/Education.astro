@@ -46,7 +46,7 @@ const certificates = [
 ];
 ---
 
-<Section className={Astro.props.className} title="Education">
+<Section className={Astro.props.className} title={m.education()}>
   <ul class="space-y-4 py-3 print:space-y-0">
     {
       education.map(({ institution, startDate, endDate, area, url }) => {
