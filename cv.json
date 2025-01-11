@@ -36,6 +36,10 @@
       "icon": "simple-icons:django"
     },
     {
+      "name": "Flask",
+      "icon": "simple-icons:flask"
+    },
+    {
       "name": "Dart",
       "icon": "simple-icons:dart"
     },
