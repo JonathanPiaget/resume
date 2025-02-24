@@ -10,25 +10,25 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.9.4",
-    "@astrojs/tailwind": "^5.1.4",
+    "@astrojs/tailwind": "^6.0.0",
     "@fancyapps/ui": "^5.0.36",
-    "@iconify-json/mdi": "^1.2.2",
+    "@iconify-json/mdi": "^1.2.3",
     "@iconify-json/ri": "^1.2.5",
-    "@iconify-json/simple-icons": "^1.2.20",
+    "@iconify-json/simple-icons": "^1.2.26",
     "@inlang/paraglide-astro": "^0.3.5",
     "@playform/compress": "^0.1.7",
-    "astro": "5.1.7",
+    "astro": "5.3.0",
     "astro-icon": "^1.1.5",
-    "hotkeypad": "0.1.1",
-    "prettier-plugin-tailwindcss": "^0.6.10",
-    "tailwindcss": "^3.4.17",
+    "hotkeypad": "1.0.1",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "tailwindcss": "^4.0.8",
     "typescript": "^5.7.3"
   },
   "devDependencies": {
     "@inlang/paraglide-js": "1.11.8",
-    "prettier": "^3.4.2",
+    "prettier": "^3.5.2",
     "prettier-plugin-astro": "^0.14.1",
     "rimraf": "^6.0.1",
-    "wrangler": "^3.103.2"
+    "wrangler": "^3.109.3"
   }
 }
