@@ -14,10 +14,10 @@
     "@fancyapps/ui": "^5.0.36",
     "@iconify-json/mdi": "^1.2.3",
     "@iconify-json/ri": "^1.2.5",
-    "@iconify-json/simple-icons": "^1.2.37",
+    "@iconify-json/simple-icons": "^1.2.38",
     "@inlang/paraglide-astro": "^0.4.1",
     "@playform/compress": "^0.1.9",
-    "astro": "5.8.1",
+    "astro": "5.9.1",
     "astro-icon": "^1.1.5",
     "hotkeypad": "1.0.2",
     "prettier-plugin-tailwindcss": "^0.6.11",
@@ -29,6 +29,6 @@
     "prettier": "^3.5.3",
     "prettier-plugin-astro": "^0.14.1",
     "rimraf": "^6.0.1",
-    "wrangler": "^4.14.1"
+    "wrangler": "^4.19.1"
   }
 }
