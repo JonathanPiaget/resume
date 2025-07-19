@@ -14,13 +14,13 @@ const { name, image, profiles, email } = basics;
       <h1>{name}</h1>
       <b>{m.label()}</b>
       <div class="flex items-center gap-2 pt-2 text-sm text-skin-muted">
-        <Icon class="print:hidden" name="mdi:world" width={20} height={20} />
+        <Icon name="mdi:world" width={20} height={20} />
         Neuchâtel, {m.country()}
       </div>
       <footer class="print">
         {email}
       </footer>
-      <footer class="print:hidden">
+      <footer>
         {
           email && (
             <a
@@ -53,14 +53,14 @@ const { name, image, profiles, email } = basics;
             );
           })
         }
-        <!-- <div
+        <div
           class="footer-button group flex h-8 w-9 cursor-pointer items-center justify-center rounded-md text-skin-hue hover:bg-skin-button-accent hover:text-skin-inverted max-sm:hidden print:hidden [&>span]:hover:text-skin-inverted"
         >
           <Icon name="ri:command-fill" class="h-5 w-5" />
-        </div> -->
+        </div>
       </footer>
     </div>
-    <figure class="relative w-fit print:hidden">
+    <figure class="relative w-fit">
       <Image
         class="shadow-skin-hues shadow-lg"
         height={600}
