@@ -8,6 +8,10 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    groups:
+      github-actions:
+        patterns:
+          - "*"
 
   # Enable version updates for javascript/npm
   - package-ecosystem: "npm"
