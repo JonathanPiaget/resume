@@ -115,6 +115,13 @@ const { image, url, theme } = CV.basics;
           -webkit-print-color-adjust: exact;
           print-color-adjust: exact;
         }
+
+        /* Force white background in Chrome print */
+        html,
+        body {
+          background: white !important;
+          background-color: white !important;
+        }
       }
     </style>
   </body>
