@@ -19,16 +19,20 @@ import Education from "@/components/sections/Education.astro";
 
 <Layout title={`${basics.name}'s Portfolio - ${m.label()}`}>
   <main
-    class="relative grid h-full max-w-7xl gap-12 p-8 max-sm:py-16 md:min-h-screen md:grid-cols-6 md:p-16 xl:gap-24"
+    class="max-sm:py-16 relative grid h-full max-w-7xl gap-12 p-8 md:min-h-screen md:grid-cols-6 md:p-16 xl:gap-24 print:!block print:!h-auto print:!min-h-0"
   >
-    <div class="slide-enter space-y-6 ease-in md:col-span-2">
+    <div
+      class="slide-enter space-y-6 ease-in md:col-span-2 print:!block print:!space-y-4"
+    >
       <Hero />
       <ThemeSwitch />
       <About />
       <Languages />
       <Interests />
     </div>
-    <div class="slide-enter-content space-y-12 md:col-span-4">
+    <div
+      class="slide-enter-content space-y-12 md:col-span-4 print:!block print:!space-y-6"
+    >
       <Experience />
       <Projects className="print:hidden" />
       <Education />
@@ -132,7 +136,17 @@ import Education from "@/components/sections/Education.astro";
     }
   }
 
-  @media (prefers-reduced-motion: no-preference) {
+  @media print {
+    /* Disable animations and ensure content is visible */
+    .slide-enter,
+    .slide-enter-content > * {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+
+  @media (prefers-reduced-motion: no-preference) and (not print) {
     .slide-enter,
     .slide-enter-content > *:not(:has(.table-of-contents)) {
       --enter-stage: 0;

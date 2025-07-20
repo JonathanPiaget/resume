@@ -109,6 +109,12 @@ const { image, url, theme } = CV.basics;
         article {
           break-inside: avoid;
         }
+
+        /* Fix for CSS custom properties in print */
+        * {
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
       }
     </style>
   </body>
