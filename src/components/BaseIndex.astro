@@ -33,9 +33,9 @@ import Education from "@/components/sections/Education.astro";
     <div
       class="slide-enter-content space-y-12 md:col-span-4 print:!block print:!space-y-6"
     >
-      <Experience />
+      <Experience className="print:break-before-page" />
       <Projects className="print:hidden" />
-      <Education />
+      <Education className="print:break-before-page" />
       <Skills />
     </div>
   </main>
@@ -117,7 +117,7 @@ import Education from "@/components/sections/Education.astro";
 
   @page {
     size: auto;
-    margin: 0mm;
+    margin: 15mm 0mm 0mm 0mm;
   }
   main {
     margin: auto;
