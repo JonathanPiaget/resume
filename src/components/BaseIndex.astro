@@ -5,6 +5,7 @@ import About from "@/components/sections/About.astro";
 import Experience from "@/components/sections/Experience.astro";
 import Hero from "@/components/sections/Hero.astro";
 import Projects from "@/components/sections/Projects.astro";
+import PersonalProjects from "@/components/sections/PersonalProjects.astro";
 import Skills from "@/components/sections/Skills.astro";
 import Languages from "@/components/sections/Languages.astro";
 import Interests from "@/components/sections/Interests.astro";
@@ -34,9 +35,10 @@ import Education from "@/components/sections/Education.astro";
       class="slide-enter-content space-y-12 md:col-span-4 print:!block print:!space-y-6"
     >
       <Experience className="print:break-before-page" />
-      <Projects className="print:hidden" />
       <Education className="print:break-before-page" />
       <Skills />
+      <Projects className="print:hidden" />
+      <PersonalProjects className="print:hidden" />
     </div>
   </main>
   <div class="border-t border-solid border-skin-hue print:hidden"></div>

@@ -1,0 +1,57 @@
+---
+import Section from "../Section.astro";
+import ProjectCard from "../ProjectCard.astro";
+import * as m from "../../paraglide/messages.js";
+
+const personalProjects = [
+  {
+    name: "SearchMark",
+    image: "/searchmark_screenshot.png",
+    isActive: true,
+    description: m.searchmark_description(),
+    highlights: [
+      m.searchmark_highlight_1(),
+      m.searchmark_highlight_2(),
+      m.searchmark_highlight_3(),
+    ],
+    url: "https://chromewebstore.google.com/detail/searchmark/ojcnjoecdiojbelkehfhibhljjaocfaf",
+    git: "https://github.com/JonathanPiaget/SearchMark",
+  },
+];
+---
+
+<Section className={Astro.props.className} title={m.personal_projects()}>
+  <div class="grid grid-cols-1 gap-3 md:grid-cols-2 print:flex print:flex-col">
+    {
+      personalProjects.map((project) => {
+        return (
+          <ProjectCard project={project} fancyboxGroup="personal-projects" />
+        );
+      })
+    }
+  </div>
+</Section>
+<script>
+  import { Fancybox } from "@fancyapps/ui";
+  Fancybox.bind('[data-fancybox="personal-projects"]', {
+    hideScrollbar: false,
+  });
+</script>
+
+<style>
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    font-size: 0.6rem;
+  }
+
+  footer span {
+    border-radius: 6px;
+    background: #eee;
+    color: #444;
+    font-size: 0.6rem;
+    font-weight: 500;
+    padding: 0.2rem 0.6rem;
+  }
+</style>

@@ -74,5 +74,12 @@
   "sadpulm_highlight_2": "💊 Drug selection interface with prescription management",
   "sadpulm_highlight_3": "🖨️ PDF generation for doctor files with patient data and prescriptions",
   "sadpulm_highlight_4": "📱 Patient-oriented PDFs with QR codes linking to medication information",
-  "sadpulm_highlight_5": "💾 Session saving functionality and exclusion tracking with reasoning"
+  "sadpulm_highlight_5": "💾 Session saving functionality and exclusion tracking with reasoning",
+  "professional_projects": "Professional Projects",
+  "personal_projects": "Personal Projects",
+  "searchmark_description": "A powerful browser extension for Firefox and Chrome that enhances bookmark management with quick save functionality and advanced search capabilities",
+  "searchmark_highlight_1": "⚡ Quick save bookmarks with global keyboard shortcuts",
+  "searchmark_highlight_2": "🔍 Advanced folder search with arrow key navigation",
+  "searchmark_highlight_3": "🌐 Multi-language support (English/French)",
+  "searchmark_highlight_4": "🛠️ Built with WXT framework, Vue.js 3, and TypeScript"
 }
