@@ -6,6 +6,20 @@ import { Image } from "astro:assets";
 
 const projects = [
   {
+    name: "Sad-Pulm",
+    image: "/sadpulm_screenshot.png",
+    isActive: true,
+    description: m.sadpulm_description(),
+    highlights: [
+      m.sadpulm_highlight_1(),
+      m.sadpulm_highlight_2(),
+      m.sadpulm_highlight_3(),
+      m.sadpulm_highlight_4(),
+    ],
+    url: "https://sad-pulm.he-arc.ch/",
+    git: "https://gitlab.com/heg-arc/sad-pulm/sad-pulm",
+  },
+  {
     name: "Arclean",
     image: "/arclean_screenshot.png",
     isActive: true,
@@ -48,19 +62,6 @@ const projects = [
     ],
     url: "https://fundsai.accipiterfinance.com",
     git: "https://gitlab.com/heg-arc/accipiter/fundsai",
-  },
-  {
-    name: "Arcultura",
-    image: "/arcultura_screenshot.png",
-    isActive: true,
-    description: m.arcultura_description(),
-    highlights: [
-      m.arcultura_highlight_1(),
-      m.arcultura_highlight_2(),
-      m.arcultura_highlight_3(),
-    ],
-    url: "https://dev.arcultura.org/",
-    git: "https://gitlab.com/heg-arc/arcultura/arcultura",
   },
 ];
 ---

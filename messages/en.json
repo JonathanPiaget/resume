@@ -68,5 +68,11 @@
   "main_contributor": "main contributor",
   "certificates": "Certificates",
   "see": "See",
-  "education": "Education"
+  "education": "Education",
+  "sadpulm_description": "Clinical decision support system (CDSS) for prescribing inhalation devices for chronic respiratory diseases",
+  "sadpulm_highlight_1": "📋 Interactive questionnaire system for medication recommendations",
+  "sadpulm_highlight_2": "💊 Drug selection interface with prescription management",
+  "sadpulm_highlight_3": "🖨️ PDF generation for doctor files with patient data and prescriptions",
+  "sadpulm_highlight_4": "📱 Patient-oriented PDFs with QR codes linking to medication information",
+  "sadpulm_highlight_5": "💾 Session saving functionality and exclusion tracking with reasoning"
 }

@@ -68,5 +68,11 @@
   "main_contributor": "principal contributeur",
   "certificates": "Certificats",
   "see": "Voir",
-  "education": "Formation"
+  "education": "Formation",
+  "sadpulm_description": "Système d'aide à la décision clinique (SADC) pour la prescription de dispositifs d'inhalation pour les maladies respiratoires chroniques",
+  "sadpulm_highlight_1": "📋 Questionnaire interactif pour les recommandations de médicaments",
+  "sadpulm_highlight_2": "💊 Interface de sélection et gestion des prescriptions de médicaments",
+  "sadpulm_highlight_3": "🖨️ Génération de PDF pour dossiers médicaux avec données patient et prescriptions",
+  "sadpulm_highlight_4": "📱 PDFs pour les patients avec QR codes vers les informations des médicaments",
+  "sadpulm_highlight_5": "💾 Sauvegarde de sessions et suivi des exclusions avec justifications"
 }
