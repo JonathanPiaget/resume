@@ -12,7 +12,7 @@ import * as m from "../../paraglide/messages.js";
     {
       skills.map(({ name, icon }) => {
         return (
-          <li class="flex items-center gap-1 rounded-md border border-solid border-skin-hue/20 bg-skin-button-accent/20 px-1 py-0.5 text-xs text-skin-hue print:!border print:!border-gray-400 print:!bg-white print:!p-1 print:!text-black">
+          <li class="flex items-center gap-1 rounded-md border border-solid border-skin-hue/20 bg-skin-button-accent/20 px-1 py-0.5 text-xs text-skin-hue transition-all duration-300 ease-in-out hover:-translate-y-0.5 hover:scale-105 hover:border-skin-hue/40 hover:bg-skin-button-accent/30 hover:shadow-lg hover:shadow-skin-hue/30 print:!transform-none print:!border print:!border-gray-400 print:!bg-white print:!p-1 print:!text-black print:!shadow-none">
             {icon && <Icon name={icon} width={16} height={16} />}{" "}
             <span>{name}</span>
           </li>
