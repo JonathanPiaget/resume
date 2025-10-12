@@ -13,7 +13,6 @@
   "present": "Aujourd'hui",
   "ido": "Institut de digitalisation des organisations",
   "full_stack_developer": "Développeur full-stack",
-  "ido_summary": "Développement et maintenance d'applications web pour différents projets",
   "on_site": "Présentiel",
   "ido_url": "https://www.he-arc.ch/gestion/institut-de-digitalisation-des-organisations-ido/",
   "summary": "Résumé",
@@ -81,5 +80,7 @@
   "searchmark_highlight_1": "⚡ Sauvegarde rapide de marque-pages avec raccourcis clavier globaux",
   "searchmark_highlight_2": "🔍 Recherche avancée de dossiers avec navigation par flèches",
   "searchmark_highlight_3": "🌐 Support multi-langues (anglais/français)",
-  "searchmark_highlight_4": "🛠️ Construit avec le framework WXT, Vue.js 3 et TypeScript"
+  "searchmark_highlight_4": "🛠️ Construit avec le framework WXT, Vue.js 3 et TypeScript",
+  "ido_summary_1": "Développement et maintenance d'applications web pour différents projets",
+  "ido_summary_2": "Chargé de cours : « Développement de compétences numériques » - Bachelor of Science en Économie d'entreprise"
 }

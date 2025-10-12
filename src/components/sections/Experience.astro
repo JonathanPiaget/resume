@@ -9,7 +9,7 @@ const work = [
     startDate: "2022-06-01",
     endDate: null,
     position: m.full_stack_developer(),
-    summary: m.ido_summary(),
+    summary: [m.ido_summary_1(), m.ido_summary_2()],
     url: m.ido_url(),
     location: `Neuchâtel, ${m.country()}`,
     location_type: m.on_site(),
@@ -124,7 +124,7 @@ const work = [
                       <div class="flex flex-col gap-1">
                         <ul class="flex list-disc flex-col gap-2 text-skin-muted [&>li]:ml-4">
                           {Array.isArray(summary) ? (
-                            summary.map((item) => ({ item }))
+                            summary.map((item) => <li>{item}</li>)
                           ) : (
                             <li>{summary}</li>
                           )}

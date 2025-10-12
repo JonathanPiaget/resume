@@ -13,7 +13,6 @@
   "present": "Present",
   "ido": "Institute for the Digitalisation of Organisations",
   "full_stack_developer": "Full-stack developer",
-  "ido_summary": "Developed and maintained web applications for different projects",
   "on_site": "On site",
   "ido_url": "https://www.he-arc.ch/en/business-management/institut-de-digitalisation-des-organisations-ido/",
   "summary": "summary",
@@ -81,5 +80,7 @@
   "searchmark_highlight_1": "⚡ Quick save bookmarks with global keyboard shortcuts",
   "searchmark_highlight_2": "🔍 Advanced folder search with arrow key navigation",
   "searchmark_highlight_3": "🌐 Multi-language support (English/French)",
-  "searchmark_highlight_4": "🛠️ Built with WXT framework, Vue.js 3, and TypeScript"
+  "searchmark_highlight_4": "🛠️ Built with WXT framework, Vue.js 3, and TypeScript",
+  "ido_summary_1": "Developed and maintained web applications for different projects",
+  "ido_summary_2": "Lecturer: \"Digital Skills Development\" - Bachelor of Science in Business Economics"
 }
