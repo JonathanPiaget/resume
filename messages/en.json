@@ -82,5 +82,17 @@
   "searchmark_highlight_3": "🌐 Multi-language support (English/French)",
   "searchmark_highlight_4": "🛠️ Built with WXT framework, Vue.js 3, and TypeScript",
   "ido_summary_1": "Developed and maintained web applications for different projects",
-  "ido_summary_2": "Lecturer: \"Digital Skills Development\" - Bachelor of Science in Business Economics"
+  "ido_summary_2": "Lecturer: \"Digital Skills Development\" - Bachelor of Science in Business Economics",
+  "print_resume": "Print Resume",
+  "send_email": "Send Email",
+  "visit_network": "Visit {network}",
+  "actions": "Actions",
+  "social": "Social",
+  "search_command": "Search Command",
+  "cmd": "Cmd",
+  "to_select": "to select",
+  "to_navigate": "to navigate",
+  "to_close": "to close",
+  "press_cmd_k_before": "Press",
+  "press_cmd_k_after": "to open the command palette."
 }

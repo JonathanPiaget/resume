@@ -82,5 +82,17 @@
   "searchmark_highlight_3": "🌐 Support multi-langues (anglais/français)",
   "searchmark_highlight_4": "🛠️ Construit avec le framework WXT, Vue.js 3 et TypeScript",
   "ido_summary_1": "Développement et maintenance d'applications web pour différents projets",
-  "ido_summary_2": "Chargé de cours : « Développement de compétences numériques » - Bachelor of Science en Économie d'entreprise"
+  "ido_summary_2": "Chargé de cours : « Développement de compétences numériques » - Bachelor of Science en Économie d'entreprise",
+  "print_resume": "Imprimer le CV",
+  "send_email": "Envoyer un email",
+  "visit_network": "Visiter {network}",
+  "actions": "Actions",
+  "social": "Réseaux sociaux",
+  "search_command": "Rechercher une commande",
+  "cmd": "Cmd",
+  "to_select": "pour sélectionner",
+  "to_navigate": "pour naviguer",
+  "to_close": "pour fermer",
+  "press_cmd_k_before": "Appuyez sur",
+  "press_cmd_k_after": "pour ouvrir la palette de commandes."
 }
