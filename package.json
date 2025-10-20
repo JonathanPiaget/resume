@@ -17,10 +17,10 @@
     "@iconify-json/simple-icons": "^1.2.54",
     "@inlang/paraglide-astro": "^0.4.1",
     "@playform/compress": "^0.2.0",
-    "astro": "5.14.4",
+    "astro": "5.14.6",
     "astro-icon": "^1.1.5",
     "hotkeypad": "1.0.2",
-    "prettier-plugin-tailwindcss": "^0.6.14",
+    "prettier-plugin-tailwindcss": "^0.7.1",
     "tailwindcss": "^3.4.18",
     "typescript": "^5.9.3"
   },
@@ -29,6 +29,6 @@
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",
     "rimraf": "^6.0.1",
-    "wrangler": "^4.42.2"
+    "wrangler": "^4.43.0"
   }
 }
