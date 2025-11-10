@@ -25,7 +25,7 @@ jobs:
         with:
           version: latest
       - name: Use Node
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           node-version: 20
           cache: "pnpm"
@@ -43,7 +43,7 @@ jobs:
       - name: Checkout your repository using git
         uses: actions/checkout@v5
       - name: Install, build, and upload your site
-        uses: withastro/action@v4
+        uses: withastro/action@v5
         with:
           node-version: 20
           package-manager: pnpm@latest
