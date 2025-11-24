@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
@@ -41,7 +41,7 @@ jobs:
     if: ${{ !cancelled() && !failure() }}
     steps:
       - name: Checkout your repository using git
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Install, build, and upload your site
         uses: withastro/action@v5
         with:
