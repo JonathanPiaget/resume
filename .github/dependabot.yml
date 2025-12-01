@@ -12,6 +12,8 @@ updates:
       github-actions:
         patterns:
           - "*"
+    cooldown:
+      default-days: 7
 
   # Enable version updates for javascript/npm
   - package-ecosystem: "npm"
@@ -26,3 +28,5 @@ updates:
     ignore:
       - dependency-name: "tailwindcss"
         versions: ["4.x"]
+    cooldown:
+      default-days: 7
