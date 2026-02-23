@@ -15,6 +15,7 @@ const personalProjects = [
       m.searchmark_highlight_3(),
     ],
     url: "https://chromewebstore.google.com/detail/searchmark/ojcnjoecdiojbelkehfhibhljjaocfaf",
+    firefoxUrl: "https://addons.mozilla.org/en-US/firefox/addon/searchmark/",
     git: "https://github.com/JonathanPiaget/SearchMark",
   },
 ];
@@ -36,6 +37,14 @@ const personalProjects = [
   Fancybox.bind('[data-fancybox="personal-projects"]', {
     hideScrollbar: false,
   });
+
+  if (navigator.userAgent.includes("Firefox")) {
+    document
+      .querySelectorAll<HTMLAnchorElement>("a[data-firefox-url]")
+      .forEach((a) => {
+        a.href = a.dataset.firefoxUrl!;
+      });
+  }
 </script>
 
 <style>

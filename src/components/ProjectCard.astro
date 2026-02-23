@@ -11,13 +11,15 @@ interface Props {
     description: string;
     highlights: string[];
     url: string;
+    firefoxUrl?: string;
     git: string;
   };
   fancyboxGroup: string;
 }
 
 const { project, fancyboxGroup } = Astro.props;
-const { url, description, highlights, name, isActive, git, image } = project;
+const { url, description, highlights, name, isActive, firefoxUrl, git, image } =
+  project;
 ---
 
 <div
@@ -37,6 +39,7 @@ const { url, description, highlights, name, isActive, git, image } = project;
               href={url}
               title={`${m.see()} ${name}`}
               target="_blank"
+              {...(firefoxUrl ? { "data-firefox-url": firefoxUrl } : {})}
             >
               {name}
               <span class="text-skin-hue transition ease-linear group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
