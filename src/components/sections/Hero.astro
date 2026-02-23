@@ -26,6 +26,7 @@ const { name, image, profiles, email } = basics;
             <a
               href={`mailto:${email}`}
               title={`Send email to me`}
+              aria-label="Send email to me"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -44,6 +45,7 @@ const { name, image, profiles, email } = basics;
               <a
                 href={url}
                 title={`Visit ${name}'s profile on ${network}`}
+                aria-label={`Visit ${name}'s profile on ${network}`}
                 target="_blank"
                 class="print:hidden"
                 rel="noopener noreferrer"
@@ -53,11 +55,12 @@ const { name, image, profiles, email } = basics;
             );
           })
         }
-        <div
+        <button
           class="footer-button max-sm:hidden group flex h-8 w-9 cursor-pointer items-center justify-center rounded-md text-skin-hue hover:bg-skin-button-accent hover:text-skin-inverted print:hidden [&>span]:hover:text-skin-inverted"
+          aria-label="Open command palette"
         >
           <Icon name="ri:command-fill" class="h-5 w-5" />
-        </div>
+        </button>
       </footer>
     </div>
     <figure class="relative w-fit">
@@ -66,7 +69,8 @@ const { name, image, profiles, email } = basics;
         height={600}
         width={600}
         src={image}
-        alt=`${name}'s profile picture`
+        alt={name}
+        loading="eager"
       />
       <div class="pointer-events-none absolute -inset-2">
         <div

@@ -57,7 +57,8 @@ const { url, description, highlights, name, isActive, firefoxUrl, git, image } =
       git && (
         <a
           href={git}
-          title="View slug repository on GitHub"
+          title={`View ${name} repository on ${git.startsWith("https://gitlab") ? "GitLab" : "GitHub"}`}
+          aria-label={`View ${name} repository on ${git.startsWith("https://gitlab") ? "GitLab" : "GitHub"}`}
           target="_blank"
           rel="noopener"
           class="opacity-75 transition duration-100 hover:scale-125 hover:opacity-100"
@@ -86,12 +87,17 @@ const { url, description, highlights, name, isActive, firefoxUrl, git, image } =
   </ul>
   {
     image && (
-      <a href={image} data-fancybox={fancyboxGroup}>
+      <a
+        href={image}
+        data-fancybox={fancyboxGroup}
+        aria-label={`View ${name} screenshot`}
+      >
         <Image
           src={image}
-          alt=""
+          alt={`Screenshot of ${name}`}
           width={800}
           height={1080}
+          loading="lazy"
           class:list={["mt-3 max-w-full rounded-lg"]}
         />
       </a>
