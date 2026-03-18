@@ -5,4 +5,13 @@ import BaseIndex from "../components/BaseIndex.astro";
 setLocale("en");
 ---
 
+<script>
+  if (!sessionStorage.getItem("locale-redirected")) {
+    sessionStorage.setItem("locale-redirected", "1");
+    if (navigator.language.startsWith("fr")) {
+      location.replace("/fr/");
+    }
+  }
+</script>
+
 <BaseIndex />
