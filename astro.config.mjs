@@ -7,7 +7,7 @@ import { paraglideVitePlugin } from "@inlang/paraglide-js";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://resume.piagetjonathan.ch",
+  site: "https://piagetjonathan.ch",
   integrations: [
     tailwind(),
     astroIcon({
