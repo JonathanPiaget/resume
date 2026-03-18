@@ -25,7 +25,7 @@ jobs:
       - name: Use Node
         uses: actions/setup-node@v6
         with:
-          node-version: 20
+          node-version: 22
           cache: "pnpm"
       - name: Install prettier-plugin-astro
         run: pnpm add prettier-plugin-astro@latest
@@ -43,7 +43,7 @@ jobs:
       - name: Install, build, and upload your site
         uses: withastro/action@v5
         with:
-          node-version: 20
+          node-version: 22
 
   deploy:
     needs:
