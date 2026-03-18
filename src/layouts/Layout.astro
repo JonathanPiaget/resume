@@ -35,6 +35,16 @@ const { image, url, theme } = CV.basics;
     <meta name="twitter:title" content={title} />
     <meta name="twitter:description" content={m.summary()} />
     <meta name="twitter:image" content="" />
+    {
+      import.meta.env.PROD && (
+        <script
+          is:inline
+          defer
+          src="https://analytics.piagetjonathan.ch/script.js"
+          data-website-id="d65f45e9-5eb7-4c64-82f8-844230f0826a"
+        />
+      )
+    }
   </head>
   <body data-theme={theme} class="relative bg-skin-fill font-sans">
     <div class="absolute top-0 -z-10 h-full w-full print:hidden">
