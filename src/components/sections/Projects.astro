@@ -6,7 +6,6 @@ import * as m from "../../paraglide/messages.js";
 const projects = [
   {
     name: "Sad-Pulm",
-    image: "/sadpulm_screenshot.png",
     isActive: true,
     description: m.sadpulm_description(),
     highlights: [
@@ -20,7 +19,6 @@ const projects = [
   },
   {
     name: "Arclean",
-    image: "/arclean_screenshot.png",
     isActive: true,
     description: m.arclean_description(),
     highlights: [
@@ -35,7 +33,6 @@ const projects = [
   },
   {
     name: "Eboxing",
-    image: "/eboxing_screenshot.png",
     isActive: true,
     description: m.eboxing_description(),
     highlights: [
@@ -50,7 +47,6 @@ const projects = [
   },
   {
     name: "Fundsai",
-    image: "/fundsai_screenshot.png",
     isActive: true,
     description: m.fundsai_description(),
     highlights: [
@@ -72,15 +68,11 @@ const projects = [
   <div class="grid grid-cols-1 gap-3 md:grid-cols-2 print:flex print:flex-col">
     {
       projects.map((project) => {
-        return <ProjectCard project={project} fancyboxGroup="projects" />;
+        return <ProjectCard project={project} />;
       })
     }
   </div>
 </Section>
-<script>
-  import { Fancybox } from "@fancyapps/ui";
-  Fancybox.bind('[data-fancybox="projects"]', { hideScrollbar: false });
-</script>
 
 <style>
   footer {

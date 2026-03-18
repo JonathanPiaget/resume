@@ -6,7 +6,6 @@ import * as m from "../../paraglide/messages.js";
 const personalProjects = [
   {
     name: "SearchMark",
-    image: "/searchmark_screenshot.png",
     isActive: true,
     description: m.searchmark_description(),
     highlights: [
@@ -25,19 +24,12 @@ const personalProjects = [
   <div class="grid grid-cols-1 gap-3 md:grid-cols-2 print:flex print:flex-col">
     {
       personalProjects.map((project) => {
-        return (
-          <ProjectCard project={project} fancyboxGroup="personal-projects" />
-        );
+        return <ProjectCard project={project} />;
       })
     }
   </div>
 </Section>
 <script>
-  import { Fancybox } from "@fancyapps/ui";
-  Fancybox.bind('[data-fancybox="personal-projects"]', {
-    hideScrollbar: false,
-  });
-
   if (navigator.userAgent.includes("Firefox")) {
     document
       .querySelectorAll<HTMLAnchorElement>("a[data-firefox-url]")

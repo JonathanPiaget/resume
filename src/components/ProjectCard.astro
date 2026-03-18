@@ -1,12 +1,10 @@
 ---
 import { Icon } from "astro-icon/components";
-import { Image } from "astro:assets";
 import * as m from "../paraglide/messages.js";
 
 interface Props {
   project: {
     name: string;
-    image: string;
     isActive: boolean;
     description: string;
     highlights: string[];
@@ -14,11 +12,10 @@ interface Props {
     firefoxUrl?: string;
     git: string;
   };
-  fancyboxGroup: string;
 }
 
-const { project, fancyboxGroup } = Astro.props;
-const { url, description, highlights, name, isActive, firefoxUrl, git, image } =
+const { project } = Astro.props;
+const { url, description, highlights, name, isActive, firefoxUrl, git } =
   project;
 ---
 
@@ -85,24 +82,6 @@ const { url, description, highlights, name, isActive, firefoxUrl, git, image } =
       })
     }
   </ul>
-  {
-    image && (
-      <a
-        href={image}
-        data-fancybox={fancyboxGroup}
-        aria-label={`View ${name} screenshot`}
-      >
-        <Image
-          src={image}
-          alt={`Screenshot of ${name}`}
-          width={800}
-          height={1080}
-          loading="lazy"
-          class:list={["mt-3 max-w-full rounded-lg"]}
-        />
-      </a>
-    )
-  }
 </div>
 
 <style>
