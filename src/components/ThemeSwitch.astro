@@ -1,10 +1,10 @@
 ---
 import { Icon } from "astro-icon/components";
 
-import { languageTag } from "../paraglide/runtime";
+import { getLocale } from "../paraglide/runtime.js";
 import * as m from "../paraglide/messages.js";
 
-const currentLang = languageTag();
+const currentLang = getLocale();
 ---
 
 <div class="inline-flex items-center print:hidden">
