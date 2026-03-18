@@ -22,8 +22,6 @@ jobs:
       - uses: actions/checkout@v6
       - name: Install pnpm
         uses: pnpm/action-setup@v4
-        with:
-          version: latest
       - name: Use Node
         uses: actions/setup-node@v6
         with:
@@ -46,7 +44,7 @@ jobs:
         uses: withastro/action@v5
         with:
           node-version: 20
-          package-manager: pnpm@latest
+          package-manager: pnpm
 
   deploy:
     needs:
