@@ -1,6 +1,6 @@
 name: Ninja i18n action
 
-on: pull_request_target
+on: pull_request_target # zizmor: ignore[dangerous-triggers]
 
 # explicitly configure permissions, in case your GITHUB_TOKEN workflow permissions are set to read-only in repository settings
 permissions:
@@ -15,7 +15,6 @@ jobs:
 
     steps:
       - name: Run Ninja i18n
-        # @main ensures that the latest version of the action is used
-        uses: opral/ninja-i18n-action@main
+        uses: opral/ninja-i18n-action@415e999371bc9489e3d4a49503c43c3d075d9428 # v0.3.19
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
