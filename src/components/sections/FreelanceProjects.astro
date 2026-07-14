@@ -1,0 +1,25 @@
+---
+import Section from "../Section.astro";
+import ProjectCard from "../ProjectCard.astro";
+import * as m from "../../paraglide/messages.js";
+
+const freelanceProjects = [
+  {
+    name: "Daylee",
+    isActive: true,
+    description: m.daylee_description(),
+    highlights: [m.daylee_highlight_1(), m.daylee_highlight_2()],
+    url: "https://dayleelunch.ch",
+  },
+];
+---
+
+<Section className={Astro.props.className} title={m.freelance_projects()}>
+  <div class="grid grid-cols-1 gap-3 md:grid-cols-2 print:flex print:flex-col">
+    {
+      freelanceProjects.map((project) => {
+        return <ProjectCard project={project} />;
+      })
+    }
+  </div>
+</Section>
