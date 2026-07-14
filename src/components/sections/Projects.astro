@@ -82,10 +82,7 @@ const projects = [
 ];
 ---
 
-<Section
-  className={Astro.props.className}
-  title=`${m.professional_projects()} (${m.main_contributor()})`
->
+<Section className={Astro.props.className} title={m.professional_projects()}>
   <div class="grid grid-cols-1 gap-3 md:grid-cols-2 print:flex print:flex-col">
     {
       projects.map((project) => {
