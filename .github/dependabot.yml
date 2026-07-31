@@ -28,5 +28,8 @@ updates:
     ignore:
       - dependency-name: "tailwindcss"
         versions: ["4.x"]
+      # typescript >=6 (incl. the 7.x Go rewrite) breaks @astrojs/check
+      - dependency-name: "typescript"
+        versions: [">=6"]
     cooldown:
       default-days: 7
