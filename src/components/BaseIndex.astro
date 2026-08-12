@@ -16,6 +16,7 @@ import ThemeSwitch from "@/components/ThemeSwitch.astro";
 
 import { basics } from "@cv";
 import Education from "@/components/sections/Education.astro";
+import Publications from "@/components/sections/Publications.astro";
 ---
 
 <Layout title={`${basics.name} — Resume`}>
@@ -36,6 +37,7 @@ import Education from "@/components/sections/Education.astro";
     >
       <Experience className="print:break-before-page" />
       <Education className="print:break-before-page" />
+      <Publications />
       <Skills />
       <Projects className="print:hidden" />
       <FreelanceProjects className="print:hidden" />
