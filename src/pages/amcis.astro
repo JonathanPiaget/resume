@@ -1,0 +1,142 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import Section from "@/components/Section.astro";
+import { Icon } from "astro-icon/components";
+import { basics } from "@cv";
+
+const { name, profiles } = basics;
+
+// Academic address rather than the personal one used on the CV.
+const contactEmail = "jonathan.piaget@he-arc.ch";
+
+const paper = {
+  title:
+    "Structural Biases in LLM-as-a-Judge Systems: Implications for reliable IS Adoption",
+  authors: "Jonathan Piaget, Ulysse Rosselet, Cédric Gaspoz",
+  affiliation: "HE-Arc Gestion, HES-SO, Switzerland",
+  session:
+    "Evaluating Conversational AI: From Trust Formation to Perceived Manipulation",
+  track: "Generative AI in Information and Service Systems (SIG SVC)",
+  when: "Saturday, August 22, 2026 · 14:00–15:30 PDT · Sorrento 2",
+  abstract:
+    "LLM-as-a-Judge systems are increasingly used to evaluate content at scale, from pre-screening applications to code review. We test whether they can be trusted with that role in a deliberately narrow, controlled setting: 100 high-frequency English words, definitions written by 5 professional dictionaries and 4 LLMs, judged blind and pairwise by 4 LLM judges (8,000 judgments). Structural biases remain massive. Position decides the verdict for 3 judges out of 4 (the definition shown first wins 65.7% of the time), self-preference reaches +73.3 percentage points, and synthetic text wins 55.2% of pairs. Inter-judge agreement is only moderate (Fleiss κ = 0.357). Sophistication is not impartiality: organizations adopting these systems need to measure their judges' biases, deploy blind and diverse panels, and calibrate continuously against human ground truth.",
+  // Shorter blurb for the meta description / link previews.
+  summary:
+    "AMCIS 2026 paper on position, self-preference and AI-AI biases in LLM-as-a-Judge systems, and what they mean for reliable adoption in organizations.",
+  aisUrl: "https://aisel.aisnet.org/amcis2026/sig_svs/svs/1/",
+  bibtex: `@inproceedings{piaget2026structural,
+  title     = {Structural Biases in {LLM-as-a-Judge} Systems: Implications for Reliable {IS} Adoption},
+  author    = {Piaget, Jonathan and Rosselet, Ulysse and Gaspoz, C\\'edric},
+  booktitle = {Proceedings of the 32nd Americas Conference on Information Systems (AMCIS)},
+  year      = {2026},
+  address   = {Reno, NV, USA},
+  url       = {https://aisel.aisnet.org/amcis2026/sig_svs/svs/1/}
+}`,
+};
+
+const links = [
+  {
+    label: "Read the paper (PDF)",
+    href: "/amcis/paper.pdf",
+    icon: "mdi:file-document-outline",
+  },
+  {
+    label: "Slides (PDF)",
+    href: "/amcis/slides.pdf",
+    icon: "mdi:presentation",
+  },
+  {
+    label: "AIS eLibrary",
+    href: paper.aisUrl,
+    icon: "mdi:open-in-new",
+  },
+];
+---
+
+<Layout title={`${paper.title} - AMCIS 2026`} description={paper.summary}>
+  <main class="mx-auto max-w-3xl space-y-10 p-8 text-skin-base md:p-16">
+    <header>
+      <p class="mb-2 font-mono text-xs uppercase tracking-widest text-skin-hue">
+        AMCIS 2026 · Reno, NV
+      </p>
+      <h1 class="text-3xl">{paper.title}</h1>
+      <p class="text-sm">{paper.authors}</p>
+      <p class="mb-4 text-sm text-skin-muted">{paper.affiliation}</p>
+      <p class="flex items-center gap-2 text-sm">
+        <Icon name="mdi:calendar-clock" width={16} height={16} />
+        {paper.when}
+      </p>
+      <p class="mt-1 text-sm text-skin-muted">
+        {paper.session} · {paper.track}
+      </p>
+    </header>
+
+    <nav class="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+      {
+        links.map(({ label, href, icon }) => (
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 rounded-md border border-skin-hue/40 px-4 py-3 text-sm text-skin-hue transition-colors duration-300 hover:bg-skin-button-accent hover:text-skin-inverted"
+          >
+            <Icon name={icon} width={20} height={20} />
+            {label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <Section title="Abstract">
+      <p class="text-sm">{paper.abstract}</p>
+    </Section>
+
+    <Section title="Cite this paper">
+      <pre
+        class="overflow-x-auto rounded-md bg-skin-button-muted p-4 font-mono text-xs text-skin-base">{paper.bibtex}</pre>
+    </Section>
+
+    <Section title="Contact">
+      <p class="text-sm text-skin-muted">
+        Happy to talk about this work, before, during or after the session.
+      </p>
+      <div class="flex items-center gap-1">
+        <a
+          href={`mailto:${contactEmail}`}
+          class="inline-flex items-center gap-2 text-sm text-skin-hue hover:underline"
+        >
+          <Icon name="mdi:email" width={20} height={20} />
+          {contactEmail}
+        </a>
+      </div>
+      <div class="flex gap-1">
+        {
+          profiles.map(({ network, url, icon }) => (
+            <a
+              href={url}
+              title={`Visit ${name}'s profile on ${network}`}
+              aria-label={`Visit ${name}'s profile on ${network}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex size-8 items-center justify-center rounded-md p-1 text-skin-hue transition-all duration-500 ease-linear hover:bg-skin-button-accent hover:text-skin-inverted"
+            >
+              <Icon name={icon} width={20} height={20} />
+            </a>
+          ))
+        }
+      </div>
+      <a href="/" class="text-sm text-skin-hue hover:underline">← Full CV</a>
+    </Section>
+  </main>
+</Layout>
+
+<script is:inline>
+  // ponytail: the theme switcher itself lives on the CV page only; here we just honour its choice.
+  const stored = localStorage.getItem("theme");
+  const system = window.matchMedia("(prefers-color-scheme: dark)").matches
+    ? "dark"
+    : "light";
+  document.documentElement.classList.add(
+    !stored || stored === "system" ? system : stored,
+  );
+</script>
