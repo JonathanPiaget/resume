@@ -1,4 +1,5 @@
 // @ts-check
+import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
 import playformCompress from "@playform/compress";
 import astroIcon from "astro-icon";
@@ -9,6 +10,7 @@ import { paraglideVitePlugin } from "@inlang/paraglide-js";
 export default defineConfig({
   site: "https://piagetjonathan.ch",
   integrations: [
+    sitemap(),
     tailwind(),
     astroIcon({
       include: {
