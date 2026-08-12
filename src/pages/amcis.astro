@@ -15,16 +15,17 @@ const paper = {
   authors: "Cédric Gaspoz, Ulysse Rosselet, Jonathan Piaget",
   affiliation:
     "University of Applied Sciences and Arts Western Switzerland (HES-SO)",
-  session:
-    "Evaluating Conversational AI: From Trust Formation to Perceived Manipulation",
-  track: "Generative AI in Information and Service Systems (SIG SVC)",
-  when: "Saturday, August 22, 2026 · 14:00–15:30 PDT · Sorrento 2",
-  // Verbatim from the camera-ready paper.
+  date: "August 22, 2026",
   abstract:
     "This study investigates the LLM-as-a-Judge paradigm as a critical Information System (IS) whose reliability and neutrality determine organizational adoption. Using dictionary definition evaluation as a methodologically neutral testbed, we conduct 8,000 blind pairwise comparisons between definitions from five established English dictionaries and four large language models, judged by the same four LLMs. Our results reveal a pronounced position bias (Definition A preferred 65.7% of the time), a massive self-preference bias (up to +73.3 percentage points when a model judges its own output), and moderate inter-judge agreement (Fleiss' kappa = 0.357). Lexical diversity analysis shows that LLM-generated definitions are shorter yet lexically comparable to human dictionaries. These structural biases constitute barriers to trust and adoption. Explicit bias measurement, diversified blind evaluation pipelines, and human-calibrated assessment are essential for reliable deployment of LLM-as-a-Judge systems in organizational contexts.",
-  keywords:
-    "LLM-as-a-Judge · Algorithmic bias · AI adoption · Automated decision-making · Self-preference · Lexicography",
-  // Shorter blurb for the meta description / link previews.
+  keywords: [
+    "LLM-as-a-Judge",
+    "Algorithmic bias",
+    "AI adoption",
+    "Automated decision-making",
+    "Self-preference",
+    "Lexicography",
+  ],
   summary:
     "AMCIS 2026 paper on position, self-preference and AI-AI biases in LLM-as-a-Judge systems, and what they mean for reliable adoption in organizations.",
   aisUrl: "https://aisel.aisnet.org/amcis2026/sig_svs/svs/1/",
@@ -43,6 +44,7 @@ const links = [
     label: "Read the paper (PDF)",
     href: "/amcis/paper.pdf",
     icon: "mdi:file-document-outline",
+    primary: true,
   },
   {
     label: "Slides (PDF)",
@@ -63,26 +65,28 @@ const links = [
       <p class="mb-2 font-mono text-xs uppercase tracking-widest text-skin-hue">
         AMCIS 2026 · Reno, NV
       </p>
-      <h1 class="text-3xl">{paper.title}</h1>
+      <h1 class="text-3xl md:text-4xl">{paper.title}</h1>
       <p class="text-sm">{paper.authors}</p>
-      <p class="mb-4 text-sm text-skin-muted">{paper.affiliation}</p>
+      <p class="mb-4 text-sm">{paper.affiliation}</p>
       <p class="flex items-center gap-2 text-sm">
-        <Icon name="mdi:calendar-clock" width={16} height={16} />
-        {paper.when}
-      </p>
-      <p class="mt-1 text-sm text-skin-muted">
-        {paper.session} · {paper.track}
+        <Icon name="mdi:calendar-blank-outline" width={16} height={16} />
+        {paper.date}
       </p>
     </header>
 
     <nav class="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
       {
-        links.map(({ label, href, icon }) => (
+        links.map(({ label, href, icon, primary }) => (
           <a
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex items-center justify-center gap-2 rounded-md border border-skin-hue/40 px-4 py-3 text-sm text-skin-hue transition-colors duration-300 hover:bg-skin-button-accent hover:text-skin-inverted"
+            class:list={[
+              "inline-flex items-center justify-center gap-2 rounded-md border px-4 py-3 text-sm transition-colors duration-300",
+              primary
+                ? "border-skin-hue bg-skin-button-accent text-skin-inverted hover:bg-skin-button-accent-hover"
+                : "border-skin-hue/40 text-skin-hue hover:bg-skin-button-accent hover:text-skin-inverted",
+            ]}
           >
             <Icon name={icon} width={20} height={20} />
             {label}
@@ -93,18 +97,16 @@ const links = [
 
     <Section title="Abstract">
       <p class="text-sm">{paper.abstract}</p>
-      <p class="text-xs text-skin-muted">{paper.keywords}</p>
+      <p class="text-xs text-skin-muted">{paper.keywords.join(", ")}</p>
     </Section>
 
     <Section title="Cite this paper">
       <pre
-        class="overflow-x-auto rounded-md bg-skin-button-muted p-4 font-mono text-xs text-skin-base">{paper.bibtex}</pre>
+        class="overflow-x-auto rounded-md border border-skin-muted bg-skin-fill p-4 font-mono text-xs text-skin-base">{paper.bibtex}</pre>
     </Section>
 
     <Section title="Contact">
-      <p class="text-sm text-skin-muted">
-        Happy to talk about this work, before, during or after the session.
-      </p>
+      <p class="text-sm">Happy to talk about this work.</p>
       <div class="flex items-center gap-1">
         <a
           href={`mailto:${contactEmail}`}
@@ -136,12 +138,6 @@ const links = [
 </Layout>
 
 <script is:inline>
-  // ponytail: the theme switcher itself lives on the CV page only; here we just honour its choice.
-  const stored = localStorage.getItem("theme");
-  const system = window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
-  document.documentElement.classList.add(
-    !stored || stored === "system" ? system : stored,
-  );
+  const dataTheme = localStorage.getItem("data-theme");
+  if (dataTheme) document.body.setAttribute("data-theme", dataTheme);
 </script>

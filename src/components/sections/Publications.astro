@@ -2,7 +2,6 @@
 import { Icon } from "astro-icon/components";
 import Section from "../Section.astro";
 
-// ponytail: "Publications" is spelled the same in EN and FR, so no Paraglide key.
 const publications = [
   {
     title:
@@ -19,7 +18,7 @@ const publications = [
   <ul class="space-y-4 py-3 print:space-y-0">
     {
       publications.map(({ title, authors, venue, year, url }) => (
-        <div class="flex items-baseline">
+        <li class="flex items-baseline">
           <Icon
             name="mdi:file-document-outline"
             class="mr-3 mt-1 hidden h-5 w-5 self-start md:inline-block"
@@ -31,8 +30,9 @@ const publications = [
                 href={url}
               >
                 {title}
-                <span class="text-skin-hue transition ease-linear group-hover:-translate-y-0.5 group-hover:translate-x-0.5">
-                  <Icon name="ri:arrow-up-line" class="rotate-45" />
+                {/* Internal route, so a plain right arrow rather than the external-link glyph. */}
+                <span class="text-skin-hue transition ease-linear group-hover:translate-x-0.5">
+                  <Icon name="ri:arrow-right-line" />
                 </span>
               </a>
             </h3>
@@ -42,7 +42,7 @@ const publications = [
               {year}
             </time>
           </div>
-        </div>
+        </li>
       ))
     }
   </ul>
