@@ -13,7 +13,11 @@ interface Props {
 
 const { image, url, theme } = CV.basics;
 
-const { title, description = m.summary(), ogImage = image } = Astro.props;
+const {
+  title,
+  description = m.meta_description(),
+  ogImage = image,
+} = Astro.props;
 
 // Per-page absolute URLs, so shared links resolve to the page instead of the site root.
 const canonical = new URL(Astro.url.pathname, Astro.site ?? url);
