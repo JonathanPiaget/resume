@@ -22,6 +22,26 @@ const {
 // Per-page absolute URLs, so shared links resolve to the page instead of the site root.
 const canonical = new URL(Astro.url.pathname, Astro.site ?? url);
 const ogImageUrl = new URL(ogImage, canonical);
+
+// hreflang only on the index pages, the sole EN/FR pair.
+const isIndex = ["/", "/fr", "/fr/"].includes(Astro.url.pathname);
+const isFrench = Astro.currentLocale === "fr";
+
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: CV.basics.name,
+  url: CV.basics.url,
+  image: new URL(image, canonical).href,
+  jobTitle: m.label(),
+  email: `mailto:${CV.basics.email}`,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Neuchâtel",
+    addressCountry: "CH",
+  },
+  sameAs: CV.basics.profiles.map((p) => p.url),
+});
 ---
 
 <!doctype html>
@@ -33,12 +53,32 @@ const ogImageUrl = new URL(ogImage, canonical);
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" href="/icon.png" />
     <link rel="canonical" href={canonical} />
+    {
+      isIndex && (
+        <>
+          <link rel="alternate" hreflang="en" href={new URL("/", canonical)} />
+          <link
+            rel="alternate"
+            hreflang="fr"
+            href={new URL("/fr/", canonical)}
+          />
+          <link
+            rel="alternate"
+            hreflang="x-default"
+            href={new URL("/", canonical)}
+          />
+        </>
+      )
+    }
     <link rel="preload" as="image" href={image} />
     <meta property="og:url" content={canonical} />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:site_name" content={CV.basics.name} />
+    <meta property="og:locale" content={isFrench ? "fr_CH" : "en_US"} />
+    <script type="application/ld+json" is:inline set:html={jsonLd} />
     <meta name="referrer" content="no-referrer" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta property="twitter:domain" content={canonical.host} />
