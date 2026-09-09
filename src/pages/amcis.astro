@@ -4,10 +4,7 @@ import Section from "@/components/Section.astro";
 import { Icon } from "astro-icon/components";
 import { basics } from "@cv";
 
-const { name, profiles } = basics;
-
-// Academic address rather than the personal one used on the CV.
-const contactEmail = "jonathan.piaget@he-arc.ch";
+const { name, profiles, email } = basics;
 
 const paper = {
   title:
@@ -109,11 +106,11 @@ const links = [
       <p class="text-sm">Happy to talk about this work.</p>
       <div class="flex items-center gap-1">
         <a
-          href={`mailto:${contactEmail}`}
+          href={`mailto:${email}`}
           class="inline-flex items-center gap-2 text-sm text-skin-hue hover:underline"
         >
           <Icon name="mdi:email" width={20} height={20} />
-          {contactEmail}
+          {email}
         </a>
       </div>
       <div class="flex gap-1">

@@ -18,6 +18,6 @@ Astro resume site, EN/FR, deployed to GitHub Pages at https://piagetjonathan.ch 
 ## Gotchas
 
 - Both locales render the same `BaseIndex.astro`; `src/pages/index.astro` and `src/pages/fr/index.astro` only call `setLocale()`.
-- `src/pages/amcis.astro` is a standalone academic page — it deliberately uses the he-arc.ch email, not the CV one.
+- `src/pages/amcis.astro` is a standalone academic page: English only, outside the EN/FR pair.
 - The page doubles as a printed PDF resume: keep the `print:` utility classes working on any layout change.
 - Colour themes are the `[data-theme]` blocks in `src/globals.css`, picked by `basics.theme` in `cv.json`.
