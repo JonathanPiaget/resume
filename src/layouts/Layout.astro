@@ -8,39 +8,91 @@ import "../globals.css";
 interface Props {
   title: string;
   description?: string;
-  ogImage?: string;
 }
 
 const { image, url, theme } = CV.basics;
 
-const {
-  title,
-  description = m.meta_description(),
-  ogImage = image,
-} = Astro.props;
+const { title, description = m.meta_description() } = Astro.props;
 
 // Per-page absolute URLs, so shared links resolve to the page instead of the site root.
 const canonical = new URL(Astro.url.pathname, Astro.site ?? url);
-const ogImageUrl = new URL(ogImage, canonical);
+const ogImageUrl = new URL(image, canonical);
 
 // hreflang only on the index pages, the sole EN/FR pair.
 const isIndex = ["/", "/fr", "/fr/"].includes(Astro.url.pathname);
+const isRoot = Astro.url.pathname === "/";
 const isFrench = Astro.currentLocale === "fr";
 
-const jsonLd = JSON.stringify({
-  "@context": "https://schema.org",
+// JSON-LD. One entity (#me) shared by every page. `identity` only carries what
+// every page renders; `person` adds the CV, so /amcis/ never claims invisible content
+// (https://developers.google.com/search/docs/appearance/structured-data/sd-policies).
+const siteUrl = `${url}/`;
+const identity = {
   "@type": "Person",
+  "@id": `${siteUrl}#me`,
   name: CV.basics.name,
-  url: CV.basics.url,
-  image: new URL(image, canonical).href,
-  jobTitle: m.label(),
+  url: siteUrl,
   email: `mailto:${CV.basics.email}`,
+  sameAs: [
+    ...CV.basics.profiles.map((p) => p.url),
+    "https://people.hes-so.ch/fr/profile/6187035740-jonathan-piaget",
+    "https://people.he-arc.ch/jonathan.piaget",
+    "https://x.com/jonpiaget",
+  ],
+};
+const person = {
+  ...identity,
+  givenName: "Jonathan",
+  familyName: "Piaget",
+  image: ogImageUrl.href,
+  jobTitle: m.label(),
+  description: m.meta_description(),
   address: {
     "@type": "PostalAddress",
     addressLocality: "Neuchâtel",
     addressCountry: "CH",
   },
-  sameAs: CV.basics.profiles.map((p) => p.url),
+  // Same names and links as Experience.astro / Education.astro render.
+  worksFor: [
+    { "@type": "Organization", name: m.ido(), url: m.ido_url() },
+    {
+      "@type": "Organization",
+      name: m.lcba(),
+      url: "https://online.light-contact.ch/",
+    },
+  ],
+  alumniOf: {
+    "@type": "CollegeOrUniversity",
+    name: "Haute Ecole de Gestion Arc",
+  },
+  knowsAbout: CV.skills.map((s) => s.name),
+};
+const jsonLd = JSON.stringify({
+  "@context": "https://schema.org",
+  "@graph": [
+    // Google reads the site name from the domain root only.
+    ...(isRoot
+      ? [
+          {
+            "@type": "WebSite",
+            "@id": `${siteUrl}#website`,
+            name: CV.basics.name,
+            url: siteUrl,
+          },
+        ]
+      : []),
+    isIndex
+      ? {
+          "@type": "ProfilePage",
+          "@id": canonical.href,
+          url: canonical.href,
+          inLanguage: Astro.currentLocale,
+          dateCreated: "2024-12-22",
+          dateModified: new Date().toISOString().slice(0, 10),
+          mainEntity: person,
+        }
+      : identity,
+  ],
 });
 ---
 
@@ -50,7 +102,7 @@ const jsonLd = JSON.stringify({
     <meta charset="UTF-8" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="/icon.png" />
     <link rel="canonical" href={canonical} />
     {
@@ -80,12 +132,8 @@ const jsonLd = JSON.stringify({
     <meta property="og:locale" content={isFrench ? "fr_CH" : "en_US"} />
     <script type="application/ld+json" is:inline set:html={jsonLd} />
     <meta name="referrer" content="no-referrer" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content={canonical.host} />
-    <meta property="twitter:url" content={canonical} />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={ogImageUrl} />
+    <!-- X falls back to the og:* tags for title, description and image. -->
+    <meta name="twitter:card" content="summary" />
     <script is:inline>
       // Applied before first paint so no page flashes the wrong theme.
       if (
@@ -152,13 +200,6 @@ const jsonLd = JSON.stringify({
         text-wrap: pretty;
       }
 
-      .print {
-        display: none !important;
-      }
-
-      .dev * {
-        @apply border border-red-500/50 bg-red-500/5;
-      }
       #hotkeypad [data-backdrop] {
         @apply !bg-zinc-800 !opacity-80;
       }
@@ -168,10 +209,6 @@ const jsonLd = JSON.stringify({
       }
 
       @media print {
-        .print {
-          display: block !important;
-        }
-
         astro-dev-toolbar {
           display: none !important;
         }
