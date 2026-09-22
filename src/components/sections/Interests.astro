@@ -25,15 +25,13 @@ const interests = [
 
 <Section title={m.interests()}>
   <ul class="font-mono opacity-75 print:font-sans">
-    {
-      interests.map(({ name, icon }) => {
-        return (
-          <li class="mb-2 flex items-center gap-1">
-            {icon && <Icon name={icon} width={16} height={16} class="me-4" />}{" "}
-            <span>{name}</span>
-          </li>
-        );
-      })
-    }
+    {interests.map(({ name, icon }) => {
+      return (
+        <li class="mb-2 flex items-center gap-1">
+          {icon && <Icon name={icon} width={16} height={16} class="me-4" />}{" "}
+          <span>{name}</span>
+        </li>
+      );
+    })}
   </ul>
 </Section>

@@ -84,11 +84,9 @@ const projects = [
 
 <Section className={Astro.props.className} title={m.professional_projects()}>
   <div class="grid grid-cols-1 gap-3 md:grid-cols-2 print:flex print:flex-col">
-    {
-      projects.map((project) => {
-        return <ProjectCard project={project} />;
-      })
-    }
+    {projects.map((project) => {
+      return <ProjectCard project={project} />;
+    })}
   </div>
 </Section>
 

@@ -8,17 +8,13 @@ const currentLang = getLocale();
 ---
 
 <div class="inline-flex items-center print:hidden">
-  <div
-    class="group/theme flex cursor-pointer items-center gap-2 rounded-md bg-transparent"
-  >
+  <div class="group/theme flex cursor-pointer items-center gap-2 rounded-md bg-transparent">
     <button
       id="themeSwitch"
       class="group/switch cursor-pointer"
       aria-label="Toggle dark mode"
     >
-      <i
-        class="flex items-center gap-1 text-sm font-medium leading-6 text-skin-base transition-transform ease-in-out group-hover/switch:rotate-45"
-      >
+      <i class="flex items-center gap-1 text-sm font-medium leading-6 text-skin-base transition-transform ease-in-out group-hover/switch:rotate-45">
         <Icon
           name="ri:moon-fill"
           class="hidden dark:block"
@@ -28,7 +24,9 @@ const currentLang = getLocale();
         <Icon name="ri:sun-fill" class="dark:hidden" width={20} height={20} />
       </i>
     </button>
-    <label for="themeSelect" class="sr-only">Select color theme</label>
+    <label for="themeSelect" class="sr-only">
+      Select color theme
+    </label>
     <select
       id="themeSelect"
       class="block w-full rounded-md border-0 bg-transparent py-1.5 pl-3 pr-10 text-skin-base ring-1 ring-inset ring-skin-muted focus:ring-2 focus:ring-skin-hue sm:text-sm sm:leading-6"
@@ -43,16 +41,20 @@ const currentLang = getLocale();
   </div>
 
   <!-- LANGUAGE SELECTOR BLOCK -->
-  <div
-    class="group/lang ml-2 flex cursor-pointer items-center gap-2 rounded-md bg-transparent"
-  >
-    <label for="langSelect" class="sr-only">Select language</label>
+  <div class="group/lang ml-2 flex cursor-pointer items-center gap-2 rounded-md bg-transparent">
+    <label for="langSelect" class="sr-only">
+      Select language
+    </label>
     <select
       id="langSelect"
       class="block w-full rounded-md border-0 bg-transparent py-1.5 pl-3 pr-10 text-skin-base ring-1 ring-inset ring-skin-muted focus:ring-2 focus:ring-skin-hue sm:text-sm sm:leading-6"
     >
-      <option value="en" selected={currentLang === "en"}>English</option>
-      <option value="fr" selected={currentLang === "fr"}>Français</option>
+      <option value="en" selected={currentLang === "en"}>
+        English
+      </option>
+      <option value="fr" selected={currentLang === "fr"}>
+        Français
+      </option>
     </select>
   </div>
 </div>

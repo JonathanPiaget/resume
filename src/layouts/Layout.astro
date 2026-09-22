@@ -106,23 +106,17 @@ const jsonLd = JSON.stringify({
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="/icon.png" />
     <link rel="canonical" href={canonical} />
-    {
-      isIndex && (
-        <>
-          <link rel="alternate" hreflang="en" href={new URL("/", canonical)} />
-          <link
-            rel="alternate"
-            hreflang="fr"
-            href={new URL("/fr/", canonical)}
-          />
-          <link
-            rel="alternate"
-            hreflang="x-default"
-            href={new URL("/", canonical)}
-          />
-        </>
-      )
-    }
+    {isIndex && (
+      <>
+        <link rel="alternate" hreflang="en" href={new URL("/", canonical)} />
+        <link rel="alternate" hreflang="fr" href={new URL("/fr/", canonical)} />
+        <link
+          rel="alternate"
+          hreflang="x-default"
+          href={new URL("/", canonical)}
+        />
+      </>
+    )}
     <meta property="og:url" content={canonical} />
     <meta property="og:type" content="website" />
     <meta property="og:title" content={title} />
@@ -130,7 +124,7 @@ const jsonLd = JSON.stringify({
     <meta property="og:image" content={ogImageUrl} />
     <meta property="og:site_name" content={CV.basics.name} />
     <meta property="og:locale" content={isFrench ? "fr_CH" : "en_US"} />
-    <script type="application/ld+json" is:inline set:html={jsonLd} />
+    <script type="application/ld+json" is:inline set:html={jsonLd}></script>
     <meta name="referrer" content="no-referrer" />
     <!-- X falls back to the og:* tags for title, description and image. -->
     <meta name="twitter:card" content="summary" />
@@ -143,23 +137,18 @@ const jsonLd = JSON.stringify({
       )
         document.documentElement.classList.add("dark");
     </script>
-    {
-      import.meta.env.PROD && (
-        <script
-          is:inline
-          defer
-          src="https://analytics.piagetjonathan.ch/script.js"
-          data-website-id="d65f45e9-5eb7-4c64-82f8-844230f0826a"
-        />
-      )
-    }
+    {import.meta.env.PROD && (
+      <script
+        is:inline
+        defer
+        src="https://analytics.piagetjonathan.ch/script.js"
+        data-website-id="d65f45e9-5eb7-4c64-82f8-844230f0826a"
+      ></script>
+    )}
   </head>
   <body data-theme={theme} class="relative bg-skin-fill font-sans">
     <div class="absolute top-0 -z-10 h-full w-full print:hidden">
-      <div
-        class="absolute bottom-auto left-[20%] right-auto top-0 h-[200px] w-[200px] -translate-x-[30%] translate-y-[20%] rounded-full bg-skin-hue/10 blur-[80px] invert-0 dark:bg-white/5"
-      >
-      </div>
+      <div class="absolute bottom-auto left-[20%] right-auto top-0 h-[200px] w-[200px] -translate-x-[30%] translate-y-[20%] rounded-full bg-skin-hue/10 blur-[80px] invert-0 dark:bg-white/5"></div>
     </div>
     <ArtPlums />
     <slot />

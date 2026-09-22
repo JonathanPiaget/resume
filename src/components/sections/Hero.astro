@@ -18,44 +18,38 @@ const { name, profiles, email } = basics;
         <Icon name="mdi:world" width={20} height={20} />
         Neuchâtel, {m.country()}
       </div>
-      <footer class="!hidden print:!block">
-        {email}
-      </footer>
+      <footer class="!hidden print:!block">{email}</footer>
       <footer>
-        {
-          email && (
+        {email && (
+          <a
+            href={`mailto:${email}`}
+            title={`Send email to me`}
+            aria-label="Send email to me"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Icon
+              class="print:hidden"
+              name="mdi:email"
+              width={20}
+              height={20}
+            />
+          </a>
+        )}
+        {profiles.map(({ network, url, icon }) => {
+          return (
             <a
-              href={`mailto:${email}`}
-              title={`Send email to me`}
-              aria-label="Send email to me"
+              href={url}
+              title={`Visit ${name}'s profile on ${network}`}
+              aria-label={`Visit ${name}'s profile on ${network}`}
               target="_blank"
+              class="print:hidden"
               rel="noopener noreferrer"
             >
-              <Icon
-                class="print:hidden"
-                name="mdi:email"
-                width={20}
-                height={20}
-              />
+              <Icon class="print:hidden" name={icon} width={20} height={20} />
             </a>
-          )
-        }
-        {
-          profiles.map(({ network, url, icon }) => {
-            return (
-              <a
-                href={url}
-                title={`Visit ${name}'s profile on ${network}`}
-                aria-label={`Visit ${name}'s profile on ${network}`}
-                target="_blank"
-                class="print:hidden"
-                rel="noopener noreferrer"
-              >
-                <Icon class="print:hidden" name={icon} width={20} height={20} />
-              </a>
-            );
-          })
-        }
+          );
+        })}
         <button
           class="footer-button max-sm:hidden group flex h-8 w-9 cursor-pointer items-center justify-center rounded-md text-skin-hue hover:bg-skin-button-accent hover:text-skin-inverted print:hidden [&>span]:hover:text-skin-inverted"
           aria-label="Open command palette"
@@ -76,22 +70,10 @@ const { name, profiles, email } = basics;
         sizes="8rem"
       />
       <div class="pointer-events-none absolute -inset-2">
-        <div
-          class="absolute -inset-y-8 right-0 w-px bg-skin-hue/50 [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"
-        >
-        </div>
-        <div
-          class="absolute -inset-y-8 left-0 w-px bg-skin-hue/50 [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"
-        >
-        </div>
-        <div
-          class="absolute -inset-x-8 bottom-0 h-px bg-skin-hue/50 [mask-image:linear-gradient(to_left,transparent,white_4rem,white_calc(100%-4rem),transparent)]"
-        >
-        </div>
-        <div
-          class="absolute -inset-x-8 top-0 h-px bg-skin-hue/50 [mask-image:linear-gradient(to_left,transparent,white_4rem,white_calc(100%-4rem),transparent)]"
-        >
-        </div>
+        <div class="absolute -inset-y-8 right-0 w-px bg-skin-hue/50 [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+        <div class="absolute -inset-y-8 left-0 w-px bg-skin-hue/50 [mask-image:linear-gradient(to_top,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+        <div class="absolute -inset-x-8 bottom-0 h-px bg-skin-hue/50 [mask-image:linear-gradient(to_left,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
+        <div class="absolute -inset-x-8 top-0 h-px bg-skin-hue/50 [mask-image:linear-gradient(to_left,transparent,white_4rem,white_calc(100%-4rem),transparent)]"></div>
       </div>
     </figure>
   </div>

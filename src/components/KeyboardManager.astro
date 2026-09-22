@@ -75,9 +75,17 @@ const profilesInfo = profiles.map(({ network, url }) => {
 </div>
 
 <template id="hotkeypad-footer">
-  <p><kbd>↩</kbd> {m.to_select()}</p>
-  <p><kbd>↑</kbd><kbd>↓</kbd> {m.to_navigate()}</p>
-  <p><kbd>Esc</kbd><kbd>Ctrl + K</kbd> {m.to_close()}</p>
+  <p>
+    <kbd>↩</kbd> {m.to_select()}
+  </p>
+  <p>
+    <kbd>↑</kbd>
+    <kbd>↓</kbd> {m.to_navigate()}
+  </p>
+  <p>
+    <kbd>Esc</kbd>
+    <kbd>Ctrl + K</kbd> {m.to_close()}
+  </p>
 </template>
 
 <div
@@ -87,8 +95,7 @@ const profilesInfo = profiles.map(({ network, url }) => {
   data-print-resume={m.print_resume()}
   data-send-email={m.send_email()}
   data-actions={m.actions()}
->
-</div>
+></div>
 
 <script>
   interface Info {

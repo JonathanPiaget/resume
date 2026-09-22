@@ -22,11 +22,9 @@ const personalProjects = [
 
 <Section className={Astro.props.className} title={m.personal_projects()}>
   <div class="grid grid-cols-1 gap-3 md:grid-cols-2 print:flex print:flex-col">
-    {
-      personalProjects.map((project) => {
-        return <ProjectCard project={project} />;
-      })
-    }
+    {personalProjects.map((project) => {
+      return <ProjectCard project={project} />;
+    })}
   </div>
 </Section>
 <script>

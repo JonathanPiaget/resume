@@ -72,24 +72,22 @@ const links = [
     </header>
 
     <nav class="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-      {
-        links.map(({ label, href, icon, primary }) => (
-          <a
-            href={href}
-            target="_blank"
-            rel="noopener noreferrer"
-            class:list={[
-              "inline-flex items-center justify-center gap-2 rounded-md border px-4 py-3 text-sm transition-colors duration-300",
-              primary
-                ? "border-skin-hue bg-skin-button-accent text-skin-inverted hover:bg-skin-button-accent-hover"
-                : "border-skin-hue/40 text-skin-hue hover:bg-skin-button-accent hover:text-skin-inverted",
-            ]}
-          >
-            <Icon name={icon} width={20} height={20} />
-            {label}
-          </a>
-        ))
-      }
+      {links.map(({ label, href, icon, primary }) => (
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class:list={[
+            "inline-flex items-center justify-center gap-2 rounded-md border px-4 py-3 text-sm transition-colors duration-300",
+            primary
+              ? "border-skin-hue bg-skin-button-accent text-skin-inverted hover:bg-skin-button-accent-hover"
+              : "border-skin-hue/40 text-skin-hue hover:bg-skin-button-accent hover:text-skin-inverted",
+          ]}
+        >
+          <Icon name={icon} width={20} height={20} />
+          {label}
+        </a>
+      ))}
     </nav>
 
     <Section title="Abstract">
@@ -98,8 +96,7 @@ const links = [
     </Section>
 
     <Section title="Cite this paper">
-      <pre
-        class="overflow-x-auto rounded-md border border-skin-muted bg-skin-fill p-4 font-mono text-xs text-skin-base">{paper.bibtex}</pre>
+      <pre class="overflow-x-auto rounded-md border border-skin-muted bg-skin-fill p-4 font-mono text-xs text-skin-base">{paper.bibtex}</pre>
     </Section>
 
     <Section title="Contact">
@@ -114,22 +111,22 @@ const links = [
         </a>
       </div>
       <div class="flex gap-1">
-        {
-          profiles.map(({ network, url, icon }) => (
-            <a
-              href={url}
-              title={`Visit ${name}'s profile on ${network}`}
-              aria-label={`Visit ${name}'s profile on ${network}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="inline-flex size-8 items-center justify-center rounded-md p-1 text-skin-hue transition-all duration-500 ease-linear hover:bg-skin-button-accent hover:text-skin-inverted"
-            >
-              <Icon name={icon} width={20} height={20} />
-            </a>
-          ))
-        }
+        {profiles.map(({ network, url, icon }) => (
+          <a
+            href={url}
+            title={`Visit ${name}'s profile on ${network}`}
+            aria-label={`Visit ${name}'s profile on ${network}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex size-8 items-center justify-center rounded-md p-1 text-skin-hue transition-all duration-500 ease-linear hover:bg-skin-button-accent hover:text-skin-inverted"
+          >
+            <Icon name={icon} width={20} height={20} />
+          </a>
+        ))}
       </div>
-      <a href="/" class="text-sm text-skin-hue hover:underline">← Full CV</a>
+      <a href="/" class="text-sm text-skin-hue hover:underline">
+        ← Full CV
+      </a>
     </Section>
   </main>
 
