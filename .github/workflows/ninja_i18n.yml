@@ -15,6 +15,6 @@ jobs:
 
     steps:
       - name: Run Ninja i18n
-        uses: opral/ninja-i18n-action@415e999371bc9489e3d4a49503c43c3d075d9428 # v0.3.19
+        uses: generaltranslation/ninja-i18n-action@v0.3.19
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
