@@ -5,15 +5,19 @@ on:
   # Using a different branch name? Replace `main` with your branch’s name
   push:
     branches: [main]
+  # Lint and build only: the deploy job is skipped on pull requests
+  pull_request:
+    branches: [main]
   # Allows you to run this workflow manually from the Actions tab on GitHub.
   workflow_dispatch:
 
 permissions:
   contents: read
 
+# Pull requests get their own group so they never queue behind a deploy
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  group: ${{ github.event_name == 'pull_request' && format('pr-{0}', github.event.pull_request.number) || 'pages' }}
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
 
 jobs:
   linter:
@@ -65,7 +69,7 @@ jobs:
     needs:
       - linter
       - build
-    if: ${{ !cancelled() && !failure() }}
+    if: ${{ !cancelled() && !failure() && github.event_name != 'pull_request' }}
     runs-on: ubuntu-latest
     permissions:
       pages: write
