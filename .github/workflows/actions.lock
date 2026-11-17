@@ -10,6 +10,8 @@ workflows:
         - 'pnpm/action-setup@v6.1.1'
         - 'pre-commit/action@v3.0.1'
         - 'withastro/action@v6.1.4'
+    '.github/workflows/dependabot-auto-merge.yml':
+        - 'dependabot/fetch-metadata@v3.1.0'
     '.github/workflows/ninja_i18n.yml':
         - 'generaltranslation/ninja-i18n-action@v0.3.19'
     '.github/workflows/pre-commit-autoupdate.yml':
@@ -74,6 +76,11 @@ dependencies:
         commit: 'sha1-22d081ff2d3a40755e97629de92e3bcbfa7cf2ed'
         owner_id: 42048915
         repo_id: 356423100
+    'dependabot/fetch-metadata@v3.1.0':
+        ref: 'v3.1.0'
+        commit: 'sha1-25dd0e34f4fe68f24cc83900b1fe3fe149efef98'
+        owner_id: 27347476
+        repo_id: 371068214
     'generaltranslation/ninja-i18n-action@v0.3.19':
         ref: 'v0.3.19'
         commit: 'sha1-415e999371bc9489e3d4a49503c43c3d075d9428'

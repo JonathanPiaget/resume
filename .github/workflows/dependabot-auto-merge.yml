@@ -1,0 +1,23 @@
+name: Dependabot auto-merge
+
+on: pull_request
+
+permissions: {}
+
+jobs:
+  auto-merge:
+    if: github.event.pull_request.user.login == 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: read # for dependabot/fetch-metadata to read the PR
+    steps:
+      - id: metadata
+        uses: dependabot/fetch-metadata@v3.1.0
+      # Allowlist: an empty or unknown update type stays manual
+      - if: contains(fromJSON('["version-update:semver-patch", "version-update:semver-minor"]'), steps.metadata.outputs.update-type)
+        run: gh pr merge --auto --squash "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          # A personal token (Dependabot secret), so that the merge triggers the
+          # deploy: a merge enabled with GITHUB_TOKEN starts no push workflow
+          GH_TOKEN: ${{ secrets.PR_TOKEN }}
