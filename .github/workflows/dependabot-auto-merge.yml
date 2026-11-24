@@ -1,6 +1,10 @@
 name: Dependabot auto-merge
 
-on: pull_request
+# Opened only: auto-merge survives later pushes, and a push by someone else
+# runs without the Dependabot secret
+on:
+  pull_request:
+    types: [opened]
 
 permissions: {}
 
